@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="ms-MY">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servis Premium Untuk Founder & Profesional | Hub Strategi Pemasaran Digital</title>
+    <meta name="description" content="Koleksi eksklusif 30 artikel premium mengenai AI, SEO, Metrik Pemasaran dan Media Sosial untuk Founder dan Profesional di Malaysia.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#0f172a', /* Latar belakang gelap, teks utama */
+                            red: '#dc2626', /* Aksen, Butang, Highlight */
+                            redhover: '#b91c1c', /* Butang Hover */
+                            gold: '#f59e0b', /* Aksen sekunder, lencana */
+                            light: '#f8fafc', /* Latar belakang cerah */
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 40px -10px rgba(15, 23, 42, 0.1)',
+                        'glow': '0 0 20px rgba(220, 38, 38, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #dc2626, #f59e0b);
+        }
+        .blob-bg {
+            background-image: radial-gradient(circle at 100% 100%, rgba(220, 38, 38, 0.05) 0, rgba(220, 38, 38, 0) 50%), 
+                              radial-gradient(circle at 0 0, rgba(15, 23, 42, 0.05) 0, rgba(15, 23, 42, 0) 50%);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #0f172a; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #dc2626; }
+
+        /* Article Prose Styling */
+        .prose h2 { font-family: 'Poppins', sans-serif; font-size: 1.75rem; font-weight: 700; color: #0f172a; margin-top: 2rem; margin-bottom: 1rem; }
+        .prose h3 { font-family: 'Poppins', sans-serif; font-size: 1.35rem; font-weight: 600; color: #0f172a; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .prose ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .prose li { margin-bottom: 0.5rem; }
+        .prose strong { color: #0f172a; font-weight: 600; }
+        .prose blockquote { border-left: 4px solid #dc2626; padding-left: 1rem; font-style: italic; color: #475569; background: #f8fafc; padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin-bottom: 1.25rem;}
+        
+        .fade-in { animation: fadeIn 0.4s ease-in-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+    
+    <!-- JSON-LD Schema for Blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Servis Premium Untuk Founder & Profesional Blog",
+      "url": "https://websaya.xyz/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Servis Premium",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://placehold.co/200x50/0f172a/ffffff?text=LOGO"
+        }
+      }
+    }
+    </script>
+</head>
+<body class="font-sans text-slate-700 bg-slate-50 antialiased selection:bg-brand-red selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-[#f3f4f6] sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer gap-2" onclick="showIndex()">
+                    <div class="bg-[#dc2626] p-1.5 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    </div>
+                    <span class="font-heading font-bold text-2xl text-slate-900 tracking-tight">Websaya<span class="text-brand-red">.xyz</span></span>
+                </div>
+                <!-- Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="https://websaya.xyz/" class="bg-[#dc2626] hover:bg-red-700 text-white px-6 py-2.5 rounded-full font-bold shadow-md transition-all transform hover:scale-105">Tempah Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BLOG INDEX VIEW -->
+    <div id="index-view" class="block fade-in">
+        <!-- Hero Section -->
+        <div class="bg-brand-navy blob-bg py-20 border-b-4 border-brand-red">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    Servis Premium Untuk <span class="gradient-text">Founder & Profesional</span>
+                </h1>
+                <p class="mt-4 text-2xl text-white max-w-4xl mx-auto font-medium">
+                    Bina Kredibiliti & Gandakan Jualan Dengan Website Profesional — Siap Dalam 24 Jam!
+                </p>
+                <p class="mt-4 text-xl text-slate-300 max-w-3xl mx-auto font-light">
+                    Ubah pelawat menjadi pelanggan setia dengan website yang memukau, mesra SEO, dan dicipta khas untuk conversion. Anda fokus pada bisnes, biar kami uruskan hal teknikal.
+                </p>
+            </div>
+        </div>
+
+        <!-- Filter/Categories -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-8">
+            <div class="flex flex-wrap gap-4 justify-center" id="category-filters">
+                <button onclick="filterCategory('All')" class="px-6 py-2 rounded-full bg-brand-navy text-white font-medium text-sm transition-colors shadow-md">Semua Topik</button>
+                <button onclick="filterCategory('AI & Masa Depan Carian')" class="px-6 py-2 rounded-full bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 font-medium text-sm transition-colors shadow-sm">AI & Carian</button>
+                <button onclick="filterCategory('Strategi SEO & Kandungan')" class="px-6 py-2 rounded-full bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 font-medium text-sm transition-colors shadow-sm">Strategi SEO</button>
+                <button onclick="filterCategory('Metrik Pemasaran & ROI')" class="px-6 py-2 rounded-full bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 font-medium text-sm transition-colors shadow-sm">Metrik & ROI</button>
+                <button onclick="filterCategory('Strategi Media Sosial')" class="px-6 py-2 rounded-full bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 font-medium text-sm transition-colors shadow-sm">Media Sosial</button>
+                <button onclick="filterCategory('Pembangunan Web')" class="px-6 py-2 rounded-full bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 font-medium text-sm transition-colors shadow-sm">Pembangunan Web</button>
+            </div>
+        </div>
+
+        <!-- Article Grid -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Javascript will inject cards here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- SINGLE ARTICLE VIEW (Hidden by Default) -->
+    <div id="article-view" class="hidden bg-slate-50 min-h-screen pb-20 fade-in">
+        
+        <!-- Article Header -->
+        <div class="bg-brand-navy blob-bg pt-16 pb-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <button onclick="showIndex()" class="inline-flex items-center text-slate-300 hover:text-white mb-8 transition-colors group">
+                    <svg class="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Kembali ke Senarai Artikel
+                </button>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span id="view-category" class="bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Kategori</span>
+                    <span class="text-slate-400 text-sm">| Masa membaca: 7 min</span>
+                </div>
+                <h1 id="view-title" class="font-heading text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
+                    Tajuk Artikel
+                </h1>
+                
+                <div class="flex items-center mt-8">
+                    <img src="https://placehold.co/100x100/dc2626/ffffff?text=Pakar" alt="Author" class="w-12 h-12 rounded-full border-2 border-brand-red">
+                    <div class="ml-4">
+                        <p class="text-white font-medium">Pakar SEO Senior</p>
+                        <p class="text-slate-400 text-sm">Servis Premium Untuk Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Article Content Area -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
+            <div class="bg-white rounded-2xl shadow-premium p-6 md:p-12 border border-slate-200">
+                
+                <!-- SEO Metadata Box (For demonstration of prompt requirements) -->
+                <div class="bg-brand-light border-l-4 border-brand-gold p-6 rounded-r-lg mb-10 hidden" id="seo-meta-box">
+                    <h3 class="font-heading text-lg font-bold text-brand-navy mb-2">Maklumat Meta SEO (Berdasarkan Keperluan Topik)</h3>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li><strong>Kata Kunci Fokus:</strong> <span id="meta-keyword"></span></li>
+                        <li><strong>Carian Niat (Intent):</strong> <span id="meta-intent"></span></li>
+                        <li><strong>Penerangan Meta:</strong> <span id="meta-desc"></span></li>
+                    </ul>
+                </div>
+
+                <!-- Main Content -->
+                <article id="view-content" class="prose max-w-none">
+                    <!-- Javascript will inject content here -->
+                </article>
+
+                <!-- Call to Action Section -->
+                <div class="mt-16 bg-brand-navy rounded-2xl p-8 md:p-12 text-center blob-bg relative overflow-hidden shadow-2xl">
+                    <h2 class="font-heading text-3xl font-bold text-white mb-4">Sedia Untuk Mendominasi Pasaran?</h2>
+                    <p class="text-slate-300 mb-8 max-w-2xl mx-auto">Tingkatkan carian organik, bina kredibiliti, dan tingkatkan jualan anda dengan strategi digital elit yang diuji berkesan. Hubungi pakar kami hari ini.</p>
+                    <a href="https://websaya.xyz/" class="inline-block bg-brand-red hover:bg-brand-redhover text-white px-8 py-4 rounded-full font-bold shadow-glow transition-all transform hover:scale-105 text-lg">
+                        Dapatkan Konsultasi Percuma
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-navy">
+        <div class="bg-[#0b1121] py-6 border-t border-[#1e293b]">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-[#64748b] text-[13px]">Hak Cipta Terpelihara © 2026 Websaya.xyz. Dibina di Malaysia by Asyraf Asri Empire 202303160700 (003505484-H)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // DATA ARTIKEL
+        // Menyimpan semua 30 artikel secara berstruktur dengan Pautan Dalaman (Internal Links) dan Struktur Penuh.
+        const articlesData = [
+            {
+                id: 1,
+                category: "AI & Masa Depan Carian",
+                title: "Macam Mana AI Search Engine Guna RAG Untuk Cari Jawapan",
+                excerpt: "Ketahui macam mana teknologi Retrieval-Augmented Generation (RAG) ubah SEO dan cara optimize website untuk AI macam ChatGPT dan Google SGE.",
+                image: "https://placehold.co/600x400/0f172a/ffffff?text=AI+Search+RAG",
+                meta: { keyword: "AI Search Engine RAG", intent: "Informational", desc: "Panduan RAG untuk SEO." },
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Landskap SEO sekarang makin berubah. Dengan wujudnya Google Search Generative Experience (SGE) dan platform AI, cara orang buat <em>search</em> kini dipacu oleh <strong>Retrieval-Augmented Generation (RAG)</strong>.</p>
+                    <h2>Apa Itu Retrieval-Augmented Generation (RAG)?</h2>
+                    <p>Senang cerita, RAG ni sistem AI yang gabungkan pemahaman bahasa dengan kemampuan tarik fakta *up-to-date* terus dari internet. Benda ni membolehkan AI bagi rujukan (Citations) ke website anda.</p>
+                    <p><strong>Baca Berkaitan:</strong> Tahu <a href="javascript:void(0)" onclick="readMore(2); return false;" class="text-brand-red font-bold hover:underline">Kenapa Brand Citations Mula Ganti Backlinks</a> untuk faham macam mana algorithm ni nilai reputasi anda.</p>
+                    
+                    <h2>Kenapa Kena Buat AI Optimization (GEO)?</h2>
+                    <p>Generative Engine Optimization (GEO) ni proses susun <em>Content</em> supaya senang AI nak baca. AI sekarang dah ambil alih hampir 60% <em>Traffic</em> jenis <em>zero-click</em>.</p>
+                    <ul>
+                        <li><strong>Information Gain:</strong> Bagi info dan data yang unik.</li>
+                        <li><strong>Tree-Walking:</strong> Susun H2, H3 biar kemas. (Tengok <a href="javascript:void(0)" onclick="readMore(3); return false;" class="text-brand-red font-bold hover:underline">Format Website Untuk Tree-Walking Algorithm</a>)</li>
+                        <li><strong>Topical Authority:</strong> Bina *Authority* dalam topik bisnes anda.</li>
+                    </ul>
+
+                    <div class="bg-brand-light p-6 border-l-4 border-brand-navy my-8 rounded-r-lg">
+                        <h4 class="font-bold text-brand-navy mb-2">Explore Kategori AI</h4>
+                        <p>Untuk info lebih <em>advance</em>, tengok artikel dalam kategori <a href="javascript:void(0)" onclick="filterCategory('AI & Masa Depan Carian'); showIndex(); return false;" class="text-brand-red font-bold hover:underline">AI & Masa Depan Carian</a>.</p>
+                    </div>
+
+                    <h3>Soalan Lazim (FAQ)</h3>
+                    <p><strong>RAG ni akan matikan SEO biasa ke?</strong> Tak, ia cuma buat SEO jadi lebih teknikal. Asas SEO masih wajib ada.</p>
+                `
+            },
+            { 
+                id: 2, category: "AI & Masa Depan Carian", 
+                title: "Kenapa Brand Citations Mula Ganti Backlinks", 
+                excerpt: "Ketahui macam mana AI algorithm sekarang nilai brand anda kat internet, walaupun takde backlink langsung.", 
+                image: "https://placehold.co/600x400/0f172a/ffffff?text=Brand+Citations", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Backlink memang penting, tapi AI sekarang lebih pandai baca <em>sentiment</em> dan sebutan nama brand anda tanpa perlukan link langsung.</p>
+                    <h2>Dari Link Berubah Ke Entity</h2>
+                    <p>Bila nama brand anda disebut kat website besar, itu dah cukup untuk AI naikkan <em>Trust Score</em> bisnes anda. AI boleh scan ayat dan cam nama brand anda sebagai satu <em>Entity</em> yang wujud.</p>
+                    <p>Untuk mula buat strategi ni, boleh rujuk <a href="javascript:void(0)" onclick="readMore(19); return false;" class="text-brand-red font-bold hover:underline">Bina Backlink Asas Guna Direktori & PR</a>.</p>
+                    
+                    <h2>Macam Mana AI Nilai 'Implied Links'</h2>
+                    <p>Contohnya nama syarikat anda masuk paper online pasal bisnes, tapi takde hyperlink ke website anda. Jangan risau, Google SGE tetap akan rekod <em>sentiment</em> positif tu.</p>
+                    <ul><li>Fokus buat Public Relations (PR) dan masuk media.</li><li>Galakkan klien sebut nama brand kat forum (rujuk <a href="javascript:void(0)" onclick="readMore(9); return false;" class="text-brand-red font-bold hover:underline">Expert Content vs Community Forum</a>).</li></ul>
+                    
+                    <div class="bg-brand-light p-6 border-l-4 border-brand-navy my-8 rounded-r-lg">
+                        <p>Kuasai metrik untuk track brand di <a href="javascript:void(0)" onclick="filterCategory('Metrik Pemasaran & ROI'); showIndex(); return false;" class="text-brand-red font-bold hover:underline">Kategori Metrik & ROI</a>.</p>
+                    </div>
+                ` 
+            },
+            { 
+                id: 3, category: "AI & Masa Depan Carian", 
+                title: "Format Website Untuk AI Tree-Walking Algorithm", 
+                excerpt: "Cara nak susun HTML anda supaya AI senang nak extract jawapan dan jadikan website anda nombor satu.", 
+                image: "https://placehold.co/600x400/0f172a/ffffff?text=Tree+Walking", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Rahsia utama nak masuk 'Featured Snippet' dalam AI Search adalah cara anda susun format website. AI baca website guna sistem yang panggil <em>Tree-Walking Algorithm</em>.</p>
+                    <h2>Seni Susun Data (DOM Tree)</h2>
+                    <p>Guna tag H2 dan H3 dengan betul. AI faham konteks melalui <em>Heading</em> yang jelas. Letak jawapan penting terus kat perenggan pertama lepas <em>Heading</em> tu.</p>
+                    <p>Benda ni berkait rapat dengan <a href="javascript:void(0)" onclick="readMore(12); return false;" class="text-brand-red font-bold hover:underline">Match Format Content Dengan Search Intent</a> supaya AI pilih jawapan anda.</p>
+                    
+                    <h2>Inverted Pyramid Untuk SEO AI</h2>
+                    <ul>
+                        <li>Bagi jawapan *straight to the point* kat atas sekali.</li>
+                        <li>Baru letak data atau detail support kat perenggan bawah.</li>
+                        <li>Guna <em>Table</em> supaya AI senang faham fakta cepat-cepat.</li>
+                    </ul>
+                    
+                    <h3>FAQ</h3>
+                    <p><strong>Boleh tak abaikan Design?</strong> Untuk AI bot boleh, tapi untuk pelawat sebenar, design amat penting. Baca bab teknikal di <a href="javascript:void(0)" onclick="readMore(17); return false;" class="text-brand-red font-bold hover:underline">Asas Technical SEO</a>.</p>
+                ` 
+            },
+            { 
+                id: 4, category: "AI & Masa Depan Carian", 
+                title: "Pentingnya Content Freshness Untuk Algorithm AI", 
+                excerpt: "AI suka data yang paling up-to-date. Belajar cara update Content lama supaya sentiasa relevan di mata AI.", 
+                image: "https://placehold.co/600x400/0f172a/ffffff?text=Content+Freshness", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4"><em>Content</em> yang dah 3 tahun lepas dah kurang berkesan. Google ada sistem panggil Query Deserves Freshness (QDF) yang memang cari maklumat *real-time*.</p>
+                    <h2>Kenapa AI Nak Data Terkini?</h2>
+                    <p>Sebab AI ni selalu dituduh buat silap atau "halusinasi" bila guna data lama. Jadi, platform AI (macam ChatGPT) memang utamakan website yang paparkan tarikh <em>Update</em> paling baru.</p>
+                    
+                    <h2>Strategi Recycle Content</h2>
+                    <p>Jangan asyik nak tulis benda baru je. Buka balik artikel lama yang pernah bawa banyak <em>Traffic</em>, tambah info terkini, tukar tahun pada tajuk, dan letak <strong>Internal Link</strong> baru. Tengok cara buat di <a href="javascript:void(0)" onclick="readMore(14); return false;" class="text-brand-red font-bold hover:underline">Taktik Internal Linking</a>.</p>
+                    
+                    <div class="bg-brand-light p-6 border-l-4 border-brand-navy my-8 rounded-r-lg">
+                        <p>Belajar lebih pasal kitaran <em>Content</em> di <a href="javascript:void(0)" onclick="filterCategory('Strategi SEO & Kandungan'); showIndex(); return false;" class="text-brand-red font-bold hover:underline">Strategi SEO & Content</a>.</p>
+                    </div>
+                ` 
+            },
+            { 
+                id: 5, category: "AI & Masa Depan Carian", 
+                title: "Check Robots.txt Supaya AI Bot Tak Kena Block", 
+                excerpt: "Ramai founder tak perasan website dorang block AI bot dari masuk. Ini cara nak selesaikan masalah ni.", 
+                image: "https://placehold.co/600x400/0f172a/ffffff?text=Robots.txt", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Pernah terfikir tak kalau file robots.txt website anda sebenarnya ter-block bot AI dari masuk? Benda ni boleh buat anda hilang prospek percuma.</p>
+                    <h2>AI Bot Ada 'User-Agent' Sendiri</h2>
+                    <p>Dulu kita cuma kisah pasal <em>Googlebot</em>. Sekarang ni dah ada <em>ChatGPT-User</em>, <em>Anthropic-ai</em>, dan <em>PerplexityBot</em>. Kalau sistem website anda block dorang, brand anda langsung tak wujud dalam carian AI.</p>
+                    <p>Pastikan sistem teknikal website anda okey. Boleh refer <a href="javascript:void(0)" onclick="readMore(17); return false;" class="text-brand-red font-bold hover:underline">Asas Technical SEO: SSL, Mobile, Page Speed</a>.</p>
+                    
+                    <h3>Cara Nak Allow AI Masuk</h3>
+                    <ul>
+                        <li>Pergi ke domainanda.com/robots.txt</li>
+                        <li>Pastikan takde tulis "Disallow: /" untuk ejen bot yang penting.</li>
+                        <li>Submit balik <em>Sitemap</em> kat Google Search Console (Refer <a href="javascript:void(0)" onclick="readMore(16); return false;" class="text-brand-red font-bold hover:underline">Plan 30 Hari Buat SEO</a>).</li>
+                    </ul>
+                ` 
+            },
+            { 
+                id: 6, category: "AI & Masa Depan Carian", 
+                title: "ChatGPT Sebagai Sales Channel Direct Anda", 
+                excerpt: "Macam mana AI Chatbot bakal jadi ejen e-Commerce peribadi yang tolong buat sales untuk bisnes anda.", 
+                image: "https://placehold.co/600x400/0f172a/ffffff?text=AI+Sales+Channel", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Platform AI sekarang bukan setakat tempat tanya soalan. Dengan adanya <em>Plugins</em>, AI mula rekomen dan tolong belikan barang untuk pengguna.</p>
+                    <h2>Evolusi Conversational Commerce</h2>
+                    <p>Bayangkan prospek taip kat ChatGPT: "Cari servis SEO terbaik kat KL bawah harga RM5k". Kalau website anda dah <em>Optimize</em> (tengok <a href="javascript:void(0)" onclick="readMore(1); return false;" class="text-brand-red font-bold hover:underline">Artikel RAG AI Search</a>), ChatGPT terus cadangkan pakej anda dalam chat tu juga.</p>
+                    
+                    <h2>Macam Mana Nak Ambil Peluang Ni</h2>
+                    <ul>
+                        <li>Pastikan harga dan pakej servis jelas kat website.</li>
+                        <li>Guna <em>Schema Markup</em> untuk produk/servis.</li>
+                        <li>Kuatkan profile <em>Social Media</em> (rujuk <a href="javascript:void(0)" onclick="readMore(28); return false;" class="text-brand-red font-bold hover:underline">Jadikan Profil Macam Saluran TV</a>) untuk bina <em>Trust</em>.</li>
+                    </ul>
+                ` 
+            },
+            { 
+                id: 7, category: "AI & Masa Depan Carian", 
+                title: "Bersedia Untuk Era AI Search Ads", 
+                excerpt: "Google SGE dah mula tunjuk iklan. Ini cara nak susun bajet Marketing dan strategi Cost Per Click (CPC) anda.", 
+                image: "https://placehold.co/600x400/0f172a/ffffff?text=AI+Search+Ads", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Format iklan search (Ads) makin berubah. Ruang iklan dalam kotak jawapan AI tu nanti akan jadi tempat yang paling mahal untuk diiklankan.</p>
+                    <h2>Ubah Cara Guna Bajet Marketing</h2>
+                    <p>Bila jawapan AI mula ambil alih search biasa, brand yang tak pandai buat SEO terpaksa bayar mahal untuk buat iklan. Tapi, kos Ads ni boleh jadi murah kalau brand anda dah ada <em>Trust Score</em> yang kuat. (Tengok macam mana nak buat kat <a href="javascript:void(0)" onclick="readMore(30); return false;" class="text-brand-red font-bold hover:underline">Bina Organic Trust Untuk Ads Murah</a>).</p>
+                    
+                    <h2>Cara Nak Bersedia</h2>
+                    <ul>
+                        <li>Monitor kos CPC dalam industri anda.</li>
+                        <li>Jangan stop buat organik <em>Content</em>; jadikan iklan sebagai backup je.</li>
+                        <li>Fokus pada kiraan ROI yang betul macam CAC dan ROAS, bukan takat klik. (Belajar di <a href="javascript:void(0)" onclick="readMore(23); return false;" class="text-brand-red font-bold hover:underline">Report Fokus Untung</a>).</li>
+                    </ul>
+                ` 
+            },
+            { 
+                id: 8, category: "AI & Masa Depan Carian", 
+                title: "Voice Search AI & Market 'Winner-Take-All'", 
+                excerpt: "Voice Search cuma akan baca SATU je jawapan dari internet. Ini strategi nak pastikan website anda jadi nombor satu.", 
+                image: "https://placehold.co/600x400/0f172a/ffffff?text=Voice+Search", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Kalau search kat handphone, Google bagi 10 result. Tapi kalau guna Voice Search (macam Siri atau Google Assistant), AI tu cuma baca SATU jawapan je. Kalau anda nombor dua, kira tak wujud la.</p>
+                    <h2>Strategi Kuasai 'Position Zero'</h2>
+                    <p>Nak menang Voice Search, kena aim untuk masuk <em>Featured Snippets</em>. Cara paling berkesan ialah buat format Soal Jawab (FAQ) dalam <em>Content</em> anda.</p>
+                    <p>Gabungkan benda ni dengan cara format yang betul. Boleh baca <a href="javascript:void(0)" onclick="readMore(12); return false;" class="text-brand-red font-bold hover:underline">Match Format Content Dengan Search Intent</a>.</p>
+                    
+                    <h3>Cara Buat Voice SEO (VSEO)</h3>
+                    <ul>
+                        <li>Guna ayat sembang biasa (conversational tone).</li>
+                        <li>Jawab soalan panjang (long-tail keywords).</li>
+                        <li>Cari apa keyword pesaing miss out guna <a href="javascript:void(0)" onclick="readMore(18); return false;" class="text-brand-red font-bold hover:underline">Keyword Gap Analysis</a>.</li>
+                    </ul>
+                ` 
+            },
+            { 
+                id: 9, category: "AI & Masa Depan Carian", 
+                title: "Expert Content (EEAT) vs Community Forum Macam Reddit", 
+                excerpt: "Kenapa algorithm lebih suka pandangan pakar yang diiktiraf berbanding pendapat random dari user forum.", 
+                image: "https://placehold.co/600x400/0f172a/ffffff?text=EEAT+vs+Reddit", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Google mungkin tengah up Reddit sekarang, tapi untuk topik kritikal macam duit, kesihatan atau bisnes (YMYL), AI tetap akan cari content jenis E-E-A-T.</p>
+                    <h2>Experience, Expertise, Authoritativeness, Trustworthiness</h2>
+                    <p>AI tak berani nak keluarkan nasihat bisnes dari user forum yang guna nama palsu. Jadi, nama penulis, biodata pakar, dan *Brand Recognition* anda memang sangat penting.</p>
+                    
+                    <h2>Tunjuk Bukti Kepakaran Anda</h2>
+                    <p>Nak Google sayang, refer panduan ni: <a href="javascript:void(0)" onclick="readMore(15); return false;" class="text-brand-red font-bold hover:underline">Tunjuk E-E-A-T (Pengalaman Pakar)</a>.</p>
+                    <p>Bina <em>Trust</em> ni kat platform lain juga, terutamanya video. Anda boleh bawa kepakaran anda ke YouTube (baca kat <a href="javascript:void(0)" onclick="readMore(21); return false;" class="text-brand-red font-bold hover:underline">SEO YouTube</a>).</p>
+                ` 
+            },
+            { 
+                id: 10, category: "AI & Masa Depan Carian", 
+                title: "Dari Keyword Density ke Topic Coverage Yang Lengkap", 
+                excerpt: "Tak payah kira berapa kali ulang keyword. Belajar cara guna Semantic SEO untuk cover topik sampai lebam.", 
+                image: "https://placehold.co/600x400/0f172a/ffffff?text=Semantic+SEO", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Jangan lagi fokus untuk kira <em>Keyword Density</em> atau buat taktik spam keyword. Algorithm zaman sekarang lebih pandai tengok 'Entity' dan maksud <em>Semantic</em> keseluruhan artikel.</p>
+                    <h2>Kuasai Knowledge Graph</h2>
+                    <p>Daripada asyik ulang perkataan "Marketing KL", sistem Semantic SEO nak anda cerita pasal benda berkaitan macam "ROI", "Copywriting", "Conversion Rate", dan "Ads". Bila perkataan-perkataan ni wujud, AI tahu <em>Content</em> anda tu memang detail.</p>
+                    <p>Teknik ni memang seiring dengan cara buat kelompok artikel. Boleh tengok <a href="javascript:void(0)" onclick="readMore(13); return false;" class="text-brand-red font-bold hover:underline">Bina Authority Guna Content Cluster</a>.</p>
+                    
+                    <div class="bg-brand-light p-6 border-l-4 border-brand-navy my-8 rounded-r-lg">
+                        <p>Nak tahu cara nak set benda ni dari mula, baca <a href="javascript:void(0)" onclick="readMore(11); return false;" class="text-brand-red font-bold hover:underline">3 Step Realistic Untuk Rank Tinggi Google</a>.</p>
+                    </div>
+                ` 
+            },
+            
+            { 
+                id: 11, category: "Strategi SEO & Kandungan", 
+                title: "3 Step Realistic Untuk Rank Tinggi Google", 
+                excerpt: "Formula ringkas: Technical SEO, Entity Authority, dan Quality Content untuk tembus page 1 Google.", 
+                image: "https://placehold.co/600x400/dc2626/ffffff?text=SEO+3+Steps", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Lupakan taktik yang pening-pening. Asas SEO yang betul perlukan 3 benda ni je: Website laju, Semantic Content, dan Authority Link.</p>
+                    <h2>1. Setup Technical Website</h2>
+                    <p>Kalau website loading lambat, <em>Content</em> best macam mana pun tak berguna. Pastikan anda lepas ujian Core Web Vitals. Baca cara nak lajukan website kat <a href="javascript:void(0)" onclick="readMore(17); return false;" class="text-brand-red font-bold hover:underline">Asas Technical SEO</a>.</p>
+                    
+                    <h2>2. Content Bertaraf Entity</h2>
+                    <p>Guna pendekatan Semantic SEO (refer <a href="javascript:void(0)" onclick="readMore(10); return false;" class="text-brand-red font-bold hover:underline">Topic Coverage Yang Lengkap</a>) supaya anda boleh cerita dari A sampai Z tanpa nampak macam robot spam keyword.</p>
+                    
+                    <h2>3. Bina Trust & Authority</h2>
+                    <p>Kalau website tu baru, mula bina <em>Trust</em> guna Off-Page SEO. Boleh ikut guide <a href="javascript:void(0)" onclick="readMore(19); return false;" class="text-brand-red font-bold hover:underline">Bina Backlink Asas Guna Direktori & PR</a> untuk 30 hari pertama.</p>
+                    
+                    <div class="bg-brand-light p-6 border-l-4 border-brand-navy my-8 rounded-r-lg">
+                        <p>Tengok lagi banyak tips kat kategori <a href="javascript:void(0)" onclick="filterCategory('Strategi SEO & Kandungan'); showIndex(); return false;" class="text-brand-red font-bold hover:underline">Strategi SEO</a>.</p>
+                    </div>
+                ` 
+            },
+            { 
+                id: 12, category: "Strategi SEO & Kandungan", 
+                title: "Match Format Content Dengan Search Intent", 
+                excerpt: "Macam mana nak kenal pasti sama ada Google nak tunjuk listicle, artikel review, atau Landing Page produk.", 
+                image: "https://placehold.co/600x400/dc2626/ffffff?text=Search+Intent", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4"><em>Search Intent</em> is king. Kalau prospek tengah cari 'cara nak buat', bagilah artikel tutorial. Jangan gopoh letak butang 'Beli Sekarang' kat situ.</p>
+                    <h2>Kenali 4 Jenis Search Intent</h2>
+                    <ol>
+                        <li><strong>Informational:</strong> Orang nak belajar (Contoh: "Apa itu SEO?").</li>
+                        <li><strong>Navigational:</strong> Orang nak cari website spesifik (Contoh: "Maybank2u Login").</li>
+                        <li><strong>Commercial:</strong> Prospek tengah buat <em>research</em> (Contoh: "Agency SEO terbaik kat KL").</li>
+                        <li><strong>Transactional:</strong> Prospek memang dah sedia nak beli (Contoh: "Harga servis buat website").</li>
+                    </ol>
+                    <p>Nak buat format yang betul untuk jenis <em>Intent</em> ni, pastikan artikel tu optimize untuk AI juga. Boleh refer <a href="javascript:void(0)" onclick="readMore(3); return false;" class="text-brand-red font-bold hover:underline">Format Website Untuk Tree-Walking Algorithm</a>.</p>
+                    <p>Kalau <em>Intent</em> tu jenis nak beli barang, pastikan nampak <em>Trust</em>. Baca <a href="javascript:void(0)" onclick="readMore(15); return false;" class="text-brand-red font-bold hover:underline">Tunjuk E-E-A-T Pakar</a>.</p>
+                ` 
+            },
+            { 
+                id: 13, category: "Strategi SEO & Kandungan", 
+                title: "Bina Authority Guna Content Cluster", 
+                excerpt: "Strategi Pillar-Cluster untuk link-kan berpuluh artikel kecil terus ke Landing Page jualan utama anda.", 
+                image: "https://placehold.co/600x400/dc2626/ffffff?text=Topic+Clusters", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Daripada buat artikel tajuk random, <em>Content Cluster</em> ni akan bagitahu Google yang website anda adalah pakar mutlak untuk topik tu.</p>
+                    <h2>Model Pillar & Cluster</h2>
+                    <p>Pilih satu "Pillar Page" (Satu page besar, contoh: "Panduan Lengkap Marketing Hartanah"). Lepas tu, tulis 10-20 "Cluster Articles" kecil yang jawab soalan spesifik (contoh: "Cara buat FB Ads untuk kondo", "Tips Copywriting rumah").</p>
+                    <p>Paling penting, semua 20 artikel kecil ni MESTI ada link patah balik ke Pillar Page tu. Teknik ni ada terang kat <a href="javascript:void(0)" onclick="readMore(14); return false;" class="text-brand-red font-bold hover:underline">Taktik Internal Linking</a>.</p>
+                    
+                    <h3>Kenapa Benda Ni Menjadi?</h3>
+                    <p>Sebab ia ikut sistem Semantic terbaru. Ini step wajib kalau anda baru buat website macam yang di ajar dalam <a href="javascript:void(0)" onclick="readMore(16); return false;" class="text-brand-red font-bold hover:underline">Plan 30 Hari Buat SEO Website Baru</a>.</p>
+                ` 
+            },
+            { 
+                id: 14, category: "Strategi SEO & Kandungan", 
+                title: "Taktik 'Internal Linking' Untuk Naikkan Ranking Page", 
+                excerpt: "Cara yang betul guna Internal Link untuk transfer 'Link Juice' dari artikel blog ke produk yang anda nak jual.", 
+                image: "https://placehold.co/600x400/dc2626/ffffff?text=Internal+Linking", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Jangan bazirkan kuasa <em>SEO Link Juice</em> anda. Arahkan <em>Traffic</em> dari artikel blog yang viral terus masuk ke <em>Landing Page</em> pakej servis anda.</p>
+                    <h2>Seni Alirkan PageRank</h2>
+                    <p>Katakan artikel <a href="javascript:void(0)" onclick="readMore(1); return false;" class="text-brand-red font-bold hover:underline">Macam Mana AI Search Engine Guna RAG</a> dapat 5,000 klik sebulan. Memang rugi besar kalau anda tak letak link kat tengah-tengah ayat tu untuk promote servis anda.</p>
+                    
+                    <h2>Guna Anchor Text Yang Pelbagai</h2>
+                    <ul>
+                        <li>Jangan asyik tulis "Klik Sini".</li>
+                        <li>Guna ayat panjang macam: <em>"Kalau berminat, boleh tengok <a href='#'>pakej servis SEO website</a> kami untuk bantu bisnes anda"</em>.</li>
+                    </ul>
+                    <p>Bila <em>Traffic</em> dah masuk, baru kita ukur jadi <em>Sales</em> ke tak. Belajar kat <a href="javascript:void(0)" onclick="readMore(22); return false;" class="text-brand-red font-bold hover:underline">Kenapa Website Traffic Cuma Vanity Metric</a>.</p>
+                ` 
+            },
+            { 
+                id: 15, category: "Strategi SEO & Kandungan", 
+                title: "Tunjuk E-E-A-T (Pengalaman Pakar)", 
+                excerpt: "Gambar real, case study dan bukti bisnes sebenar sekarang memang wajib untuk puaskan hati rater Google.", 
+                image: "https://placehold.co/600x400/dc2626/ffffff?text=EEAT+SEO", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Bila bersepah sangat artikel AI copy paste, Google mula bezakan siapa pakar sebenar dengan guna syarat 'E-E-A-T': Experience, Expertise, Authoritativeness, dan Trust.</p>
+                    <h2>Cara Nak Tunjuk 'Experience'</h2>
+                    <p>Buktikan anda ni wujud dan memang buat bisnes ni:</p>
+                    <ul>
+                        <li><strong>Gambar Real:</strong> Stop guna gambar stok. Letak gambar ofis, produk, atau screenshot kerja sebenar.</li>
+                        <li><strong>Case Study Sendiri:</strong> Cerita macam mana anda tolong klien lokal. Benda ni support data <em>Incrementality</em>, tengok <a href="javascript:void(0)" onclick="readMore(26); return false;" class="text-brand-red font-bold hover:underline">Guna Incrementality Test Untuk Bukti Sales</a>.</li>
+                        <li><strong>Profil Penulis:</strong> Wajib ada kotak biodata author dan letak link ke LinkedIn.</li>
+                    </ul>
+                    <p>Semua ni sangat perlu kalau nak menang lawan forum bebas, macam yang dibincang dalam <a href="javascript:void(0)" onclick="readMore(9); return false;" class="text-brand-red font-bold hover:underline">Expert Content vs Community Forum</a>.</p>
+                ` 
+            },
+            { 
+                id: 16, category: "Strategi SEO & Kandungan", 
+                title: "Plan 30 Hari Buat SEO Website Baru", 
+                excerpt: "Step-by-step apa yang founder kena buat dalam bulan pertama lepas je launch website syarikat.", 
+                image: "https://placehold.co/600x400/dc2626/ffffff?text=30+Days+SEO", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Ada benda panggil 'Google Sandbox' untuk web baru. Jangan gelabah kalau website tak masuk ranking terus. Guna 30 hari pertama ni untuk setelkan asas Technical SEO.</p>
+                    <h2>Minggu 1: Technical Health</h2>
+                    <p>Fokus pertama, takde error teknikal. Pastikan ada SSL, website cantik kat handphone, dan <em>Page Speed</em> laju ikut standard yang ajar kat <a href="javascript:void(0)" onclick="readMore(17); return false;" class="text-brand-red font-bold hover:underline">Asas Technical SEO</a>.</p>
+                    
+                    <h2>Minggu 2 & 3: Buat Content Cluster</h2>
+                    <p>Mula publish <em>Content</em> yang fokus (Pillar Pages) macam yang dicerita kat <a href="javascript:void(0)" onclick="readMore(13); return false;" class="text-brand-red font-bold hover:underline">Bina Authority Guna Content Cluster</a>.</p>
+                    
+                    <h2>Minggu 4: Off-Page & Direktori Lokal</h2>
+                    <p>Lepas tu, register nama brand kat Google My Business dan portal syarikat Malaysia. Nak tahu lebih lanjut, boleh tengok <a href="javascript:void(0)" onclick="readMore(19); return false;" class="text-brand-red font-bold hover:underline">Bina Backlink Asas</a>.</p>
+                ` 
+            },
+            { 
+                id: 17, category: "Strategi SEO & Kandungan", 
+                title: "Asas Technical SEO: SSL, Mobile, Page Speed", 
+                excerpt: "Semak 3 faktor utama untuk ranking Google: sekuriti website, mesra mobile, dan kelajuan Core Web Vitals.", 
+                image: "https://placehold.co/600x400/dc2626/ffffff?text=Technical+SEO", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Kalau penulisan power tahap gaban pun, tapi website loading sangkut lebih 3 saat, prospek lari (Bounce Rate tinggi). Asas utama adalah Technical SEO.</p>
+                    <h2>3 Benda Teknikal Wajib Buat</h2>
+                    <ol>
+                        <li><strong>SSL (HTTPS):</strong> Tanpa mangga hijau ni, Chrome akan bagi amaran "Not Secure". Memang confirm prospek lari.</li>
+                        <li><strong>Mobile-First Indexing:</strong> Google nilai design handphone dulu tau. Kalau cacat kat handphone, ranking kat desktop pun jatuh.</li>
+                        <li><strong>Core Web Vitals:</strong> Kena jaga kelajuan <em>Load</em> dan elemen visual yang tak melompat-lompat bila scroll.</li>
+                    </ol>
+                    <p>Dan jangan lupa check file robots.txt macam yang dicerita dalam <a href="javascript:void(0)" onclick="readMore(5); return false;" class="text-brand-red font-bold hover:underline">Check Robots.txt Supaya AI Bot Tak Kena Block</a> supaya bot boleh masuk.</p>
+                ` 
+            },
+            { 
+                id: 18, category: "Strategi SEO & Kandungan", 
+                title: "Keyword Gap Analysis Untuk Curi Traffic Pesaing", 
+                excerpt: "Strategi mudah nak tapau keyword yang pesaing anda tengah rank tapi anda tertinggal.", 
+                image: "https://placehold.co/600x400/dc2626/ffffff?text=Keyword+Gap", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Buat apa pening kepala fikir topik baru kalau boleh guna data yang dah ada? Guna <em>Keyword Gap Analysis</em> untuk curi lubuk <em>Traffic</em> pesaing secara legal.</p>
+                    <h2>Macam Mana Benda Ni Berfungsi?</h2>
+                    <p>Anda letak nama website anda dengan 3 pesaing besar dalam SEO tools macam Ahrefs. Sistem akan tunjukkan ratusan keyword di mana pesaing anda page 1, tapi website anda langsung takde.</p>
+                    <p>Bila dah jumpa keyword emas ni, buat artikel baru ikut <em>Search Intent</em>. Baca cara nak buat kat <a href="javascript:void(0)" onclick="readMore(12); return false;" class="text-brand-red font-bold hover:underline">Match Format Content Dengan Search Intent</a>.</p>
+                    <p>Nak siapkan cepat, boleh minta tolong AI buat draf, tapi ingat pesan kat <a href="javascript:void(0)" onclick="readMore(20); return false;" class="text-brand-red font-bold hover:underline">Guna AI Sebagai Assistant, Bukan Robot Writer</a>.</p>
+                ` 
+            },
+            { 
+                id: 19, category: "Strategi SEO & Kandungan", 
+                title: "Bina Backlink Asas Guna Direktori & PR", 
+                excerpt: "Cara paling selamat nak mula buat profile backlink untuk bisnes yang baru setup kat Malaysia.", 
+                image: "https://placehold.co/600x400/dc2626/ffffff?text=Basic+Link+Building", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Website yang baru siap selalunya bermula dengan Domain Authority 0. Untuk bagi Google percaya, letak info kat direktori bisnes dan buat Press Release (PR) adalah ubat paling cepat.</p>
+                    <h2>Foundational Links</h2>
+                    <p>Pastikan nama bisnes, alamat, dan phone number (NAP) sebijik sama kat semua portal direktori, Google Business profile, dan Facebook. Google sangat teliti bab data NAP ni.</p>
+                    
+                    <p>Proses ni penting supaya bila AI cari nama brand kita, dia kenal syarikat tu legit. Benda ni berkait rapat dengan artikel <a href="javascript:void(0)" onclick="readMore(2); return false;" class="text-brand-red font-bold hover:underline">Kenapa Brand Citations Ganti Backlinks</a>.</p>
+                    
+                    <div class="bg-brand-light p-6 border-l-4 border-brand-navy my-8 rounded-r-lg">
+                        <p>Banyak lagi taktik SEO padu kat kategori <a href="javascript:void(0)" onclick="filterCategory('Strategi SEO & Kandungan'); showIndex(); return false;" class="text-brand-red font-bold hover:underline">Strategi SEO</a>.</p>
+                    </div>
+                ` 
+            },
+            { 
+                id: 20, category: "Strategi SEO & Kandungan", 
+                title: "Guna AI Sebagai Assistant, Bukan Robot Writer", 
+                excerpt: "Bahayanya kalau 100% copy-paste jawapan ChatGPT. Cara guna AI sekadar untuk buat draf idea.", 
+                image: "https://placehold.co/600x400/dc2626/ffffff?text=AI+Assistance", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Kena berhati-hati, "Spam Update" dari Google dah ban beribu website sebab 100% copy paste artikel ChatGPT. <em>Content</em> yang bunyi macam robot tu Google akan buang terus dari search result.</p>
+                    <h2>Cara Bijak Guna AI Untuk Tulis Artikel</h2>
+                    <ul>
+                        <li>Guna AI sekadar untuk susun rangka idea (outline).</li>
+                        <li>Masukkan pengalaman kerja anda sendiri dalam point-point tu supaya lepas standard EEAT. (Rujuk: <a href="javascript:void(0)" onclick="readMore(15); return false;" class="text-brand-red font-bold hover:underline">Tunjuk E-E-A-T Pengalaman Pakar</a>).</li>
+                        <li>Manual check balik fakta takut AI 'halusinasi'.</li>
+                    </ul>
+                    <p>Benda ni penting supaya website anda tak dilabel sebagai <em>thin content</em>. Kalau bosan buat artikel, boleh tukar format buat video kat YouTube. Baca <a href="javascript:void(0)" onclick="readMore(21); return false;" class="text-brand-red font-bold hover:underline">Diversifikasi Trafik Guna SEO YouTube</a>.</p>
+                ` 
+            },
+            { 
+                id: 21, category: "Strategi SEO & Kandungan", 
+                title: "Diversifikasi Trafik Guna SEO YouTube", 
+                excerpt: "Macam mana nak apply Search Intent ke dalam video supaya bisnes anda power kat YouTube.", 
+                image: "https://placehold.co/600x400/dc2626/ffffff?text=YouTube+SEO", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Orang bukan setakat search kat Google.com je. YouTube sekarang ni platform search nombor dua paling besar. Lagipun, video kerap sangat naik jadi *Featured Snippet* kat SERP Google.</p>
+                    <h2>Asas VSEO Untuk YouTube</h2>
+                    <p>Video pun guna algorithm: Tajuk power, Thumbnail yang boleh bagi Click Through Rate (CTR) tinggi, dan <em>Audience Retention</em> yang lama. Jangan lupa letak Subtitle (CC) dan Timestamps supaya bot faham video tu cerita pasal apa (Refer balik konsep <em>Semantic SEO</em> kat <a href="javascript:void(0)" onclick="readMore(10); return false;" class="text-brand-red font-bold hover:underline">Dari Keyword Density ke Topic Coverage</a>).</p>
+                    <p>Bila video YouTube dah power, potong video tu untuk masuk kat Social Media. (Belajar cara nak urus macam <a href="javascript:void(0)" onclick="readMore(28); return false;" class="text-brand-red font-bold hover:underline">Jadikan Profil Macam Saluran TV</a>).</p>
+                ` 
+            },
+
+            { 
+                id: 22, category: "Metrik Pemasaran & ROI", 
+                title: "Kenapa Website Traffic Cuma 'Vanity Metric'", 
+                excerpt: "Zaman sekarang, Leads dan Sales dari website jauh lebih penting dari setakat kira jumlah pelawat masuk.", 
+                image: "https://placehold.co/600x400/f59e0b/ffffff?text=Vanity+Metrics", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Satu juta pelawat tapi kosong jualan takde guna. Tambah lagi sekarang zaman carian *zero-click*, tengok data "Pageviews" tu sekadar nak sedapkan hati je.</p>
+                    <h2>Ubah Target Kepada Conversion Rate</h2>
+                    <p>Fokus patut diubah pada <em>Conversion Rate Optimization (CRO)</em>. Daripada raikan klik masuk, patut mula track berapa ramai isi form (Leads), berapa ramai book call, dan berapa <em>Sales</em> yang berjaya close.</p>
+                    <p>Nak tahu cara bentangkan report ni pada boss, boleh refer <a href="javascript:void(0)" onclick="readMore(23); return false;" class="text-brand-red font-bold hover:underline">Bina Profit-Focused Report</a>.</p>
+                    
+                    <div class="bg-brand-light p-6 border-l-4 border-brand-navy my-8 rounded-r-lg">
+                        <p>Untuk cerita pasal ROI yang serius, jelajah ruangan <a href="javascript:void(0)" onclick="filterCategory('Metrik Pemasaran & ROI'); showIndex(); return false;" class="text-brand-red font-bold hover:underline">Metrik Pemasaran & ROI</a>.</p>
+                    </div>
+                ` 
+            },
+            { 
+                id: 23, category: "Metrik Pemasaran & ROI", 
+                title: "Bina Profit-Focused Report Untuk Pihak Pengurusan", 
+                excerpt: "Cara buat report Marketing yang bos nak tengok: Customer Acquisition Cost (CAC) dan Lifetime Value (LTV).", 
+                image: "https://placehold.co/600x400/f59e0b/ffffff?text=ROI+Reporting", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Director atau Investor tak pandang pun jumlah 'Likes' atau 'Share'. Report <em>Marketing</em> wajib cerita pasal keuntungan atau nombor kewangan syarikat.</p>
+                    <h2>Dua Metrik Paling King: CAC & LTV</h2>
+                    <ul>
+                        <li><strong>CAC (Customer Acquisition Cost):</strong> Berapa jumlah duit hangus (iklan + gaji team SEO + software) semata-mata nak dapatkan SATU klien yang bayar.</li>
+                        <li><strong>LTV (Lifetime Value):</strong> Total amount yang klien tu spend dengan bisnes kita dari mula sampai dia berhenti langgan.</li>
+                    </ul>
+                    <p>Rule of thumb yang sihat ialah LTV mesti 3 kali ganda lebih besar dari CAC. Nak buktikan kempen tu betul-betul bawa untung, buat <a href="javascript:void(0)" onclick="readMore(26); return false;" class="text-brand-red font-bold hover:underline">Incrementality Test Untuk Bukti Sales</a>.</p>
+                ` 
+            },
+            { 
+                id: 24, category: "Metrik Pemasaran & ROI", 
+                title: "Kira 'Share of Voice' Berbanding Pesaing Anda", 
+                excerpt: "Teknik nak check berapa peratus penguasaan market brand anda kat internet berbanding pesaing.", 
+                image: "https://placehold.co/600x400/f59e0b/ffffff?text=Share+of+Voice", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4"><em>Share of Voice (SOV)</em> tu maksudnya, sejauh mana nama brand anda sebut-sebut (mendominasi) dalam perbualan pasaran kat ruangan carian organik, Social Media dan PR.</p>
+                    <h2>Cara Kira SOV Basic</h2>
+                    <p>Formula simple: (Traffic Website Anda bahagi Total Traffic Top 10 Pesaing) darab 100.</p>
+                    <p>Selain guna tools mahal, anda boleh usha guna Google percuma je untuk tengok trend brand pesaing. Baca cara buat di <a href="javascript:void(0)" onclick="readMore(25); return false;" class="text-brand-red font-bold hover:underline">Track Perkembangan Brand Percuma Guna Google Trends</a>.</p>
+                    <p>Kalau SOV kita besar, kita ada *advantage* bila iklan dalam SGE AI Google nanti. Ruang Ads tu terhad, jadi yang nama besar senang naik (Rujuk <a href="javascript:void(0)" onclick="readMore(7); return false;" class="text-brand-red font-bold hover:underline">Era AI Search Ads</a>).</p>
+                ` 
+            },
+            { 
+                id: 25, category: "Metrik Pemasaran & ROI", 
+                title: "Track Perkembangan Brand Percuma Guna Google Trends", 
+                excerpt: "Cara guna Google Trends untuk check sama ada makin ramai orang cari nama syarikat anda bulan ni.", 
+                image: "https://placehold.co/600x400/f59e0b/ffffff?text=Google+Trends", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Apa beza brand power dengan suam-suam kuku? Brand yang power orang akan terus taip nama brand dorang kat Google Search, dorang tak taip masalah umum lagi.</p>
+                    <h2>Ukur Brand Demand Anda</h2>
+                    <p>Guna Google Trends. Masukkan nama syarikat anda, dan compare dengan 3 syarikat pesaing. Kalau graf anda menaik, maksudnya kerja Public Relations atau content Social Media bersiri anda tu menjadi (Tengok cara buat kat <a href="javascript:void(0)" onclick="readMore(29); return false;" class="text-brand-red font-bold hover:underline">Buat Episodic Themed Show Kat Social Media</a>).</p>
+                    
+                    <h3>Jangan Lupa Target Utama</h3>
+                    <p>Tapi ingat, graf nama naik tu kena pastikan <em>Sales</em> pun masuk. Kalau tak, ia tetap jatuh bawah kategori vanity, rujuk <a href="javascript:void(0)" onclick="readMore(22); return false;" class="text-brand-red font-bold hover:underline">Kenapa Website Traffic Cuma Vanity Metric</a>.</p>
+                ` 
+            },
+            { 
+                id: 26, category: "Metrik Pemasaran & ROI", 
+                title: "Guna Incrementality Test Untuk Bukti Sales", 
+                excerpt: "Cara nak buktikan yang kempen Marketing anda tu memang bawa masuk duit untung yang baru.", 
+                image: "https://placehold.co/600x400/f59e0b/ffffff?text=Incrementality", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Kadang-kadang Facebook Ads Pixel suka 'claim' dia yang buat <em>Sales</em> padahal klien tu memang dah nak beli dari website sebab nampak kat organik SEO. Jadi, kena buat ujian <em>Incrementality</em>.</p>
+                    <h2>Iklan Tu Betul-Betul Bawa Duit Ke?</h2>
+                    <p>Buat ujian <em>Holdout Test</em>. Contohnya, tutup iklan kat negeri Selangor selama seminggu, tapi biarkan jalan kat negeri lain. Kalau jualan kat Selangor jatuh teruk, maknanya iklan tu memang bawa *Incremental Sales*.</p>
+                    
+                    <p>Bila dah confirm untung, barulah present data ni kat bos guna format yang kita bincang kat <a href="javascript:void(0)" onclick="readMore(23); return false;" class="text-brand-red font-bold hover:underline">Bina Profit-Focused Report Untuk Pihak Pengurusan</a>.</p>
+                ` 
+            },
+
+            { 
+                id: 27, category: "Strategi Media Sosial", 
+                title: "Kenapa Post Social Media Biasa-Biasa Sekarang Gagal", 
+                excerpt: "Zaman letak poster 'Selamat Pagi' kat FB dah lapuk. Algorithm sekarang suka video konsep Edutainment.", 
+                image: "https://placehold.co/600x400/10b981/ffffff?text=Social+Media+Fail", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Dulu hari-hari post infografik bosan kat Facebook page pun boleh dapat Like. Sekarang platform sosial dah kena langgar dengan TikTok, dorang nak benda yang ada nilai hiburan sambil belajar (Edutainment).</p>
+                    <h2>Watch Time Algorithm</h2>
+                    <p>Orang sekarang scroll laju. Kalau letak post jenis <em>hard-sell</em> nak jual barang je, algorithm terus <em>Shadow Ban</em> (tak bagi reach). <em>Content</em> anda wajib kena ada gaya <em>storytelling</em>.</p>
+                    <p>Kalau dah takde idea sangat, jom ubah *mindset* dengan cara tengok balik akaun bisnes anda macam yang diterang kat <a href="javascript:void(0)" onclick="readMore(28); return false;" class="text-brand-red font-bold hover:underline">Jadikan Profil Jenama Macam Saluran TV</a>.</p>
+                    
+                    <div class="bg-brand-light p-6 border-l-4 border-brand-navy my-8 rounded-r-lg">
+                        <p>Kaji macam mana nak buat bisnes viral tanpa nampak menjual kat <a href="javascript:void(0)" onclick="filterCategory('Strategi Media Sosial'); showIndex(); return false;" class="text-brand-red font-bold hover:underline">Strategi Media Sosial</a>.</p>
+                    </div>
+                ` 
+            },
+            { 
+                id: 28, category: "Strategi Media Sosial", 
+                title: "Jadikan Profil Jenama Macam Saluran TV", 
+                excerpt: "Tukar page sosial syarikat jadi saluran 'Shows', bukan papan kenyataan iklan semata-mata.", 
+                image: "https://placehold.co/600x400/10b981/ffffff?text=TV+Network+Strategy", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Cuba anggap profile brand syarikat (kat LinkedIn, TikTok, IG) tu macam channel Netflix. Mana ada orang nak Follow channel yang 24 jam tayang iklan barang je kan?</p>
+                    <h2>Mentaliti Saluran (Channel Mentality)</h2>
+                    <p>Anda perlukan satu 'Show' yang spesifik. Buat satu segmen yang <em>Follower</em> anda tunggu-tunggu. Bila buat content secara konsisten, audiens akan biasa dan lekat dengan brand anda.</p>
+                    
+                    <p>Cara praktikal nak plan jadual <em>content</em> bersegmen ni boleh dibaca kat artikel <a href="javascript:void(0)" onclick="readMore(29); return false;" class="text-brand-red font-bold hover:underline">Buat Episodic Themed Show Kat Social Media</a>.</p>
+                    
+                    <h3>FAQ Biasa:</h3>
+                    <p><strong>Kena sewa studio mahal ke?</strong> Eh takyah. Guna sudut ofis, setup mic yang clear, dan tunjuk muka *spokesperson* syarikat. Benda ni naikkan kualiti macam konsep E-E-A-T kat <a href="javascript:void(0)" onclick="readMore(15); return false;" class="text-brand-red font-bold hover:underline">Tunjuk E-E-A-T (Pengalaman Pakar)</a>.</p>
+                ` 
+            },
+            { 
+                id: 29, category: "Strategi Media Sosial", 
+                title: "Buat 'Episodic Themed Show' Kat Social Media", 
+                excerpt: "Macam mana nak buat siri mingguan dengan host tetap dan set background yang mudah audiens cam.", 
+                image: "https://placehold.co/600x400/10b981/ffffff?text=Episodic+Content", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Konsisten ni mata wang paling berharga kalau nak buat <em>Follower</em> lekat. Bila video tu jadi macam siri (episodic), orang akan rasa tak sabar nak tunggu episod baru.</p>
+                    <h2>3 Elemen Untuk Episodic Show</h2>
+                    <ol>
+                        <li><strong>Host (Anchor):</strong> Wajib ada muka pengacara tetap (CEO atau staf marketing). Jangan kejap muka Ali, kejap muka Abu.</li>
+                        <li><strong>Set Fizikal:</strong> Background kena konsisten. Contoh dinding sama, lampu neon kaler sama. Ini penting untuk bina "Brand Recall".</li>
+                        <li><strong>Jadual Tetap:</strong> Contohnya: "Podcast Santai Bisnes - Tayang Pukul 9 Malam Setiap Jumaat".</li>
+                    </ol>
+                    <p>Bila view video dah banyak, senang nak buat iklan *Retargeting* nanti. Rujuk teknik iklan jimat kat <a href="javascript:void(0)" onclick="readMore(30); return false;" class="text-brand-red font-bold hover:underline">Bina Organic Trust Untuk Ads Murah</a>.</p>
+                ` 
+            },
+            { 
+                id: 30, category: "Strategi Media Sosial", 
+                title: "Bina Organic Trust Untuk Ads Murah", 
+                excerpt: "Orang yang suka tengok content free anda selalunya lebih mudah convert jadi pembeli bila kena iklan Ads.", 
+                image: "https://placehold.co/600x400/10b981/ffffff?text=Organic+to+Paid", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Kalau main Facebook atau TikTok Ads tuju kat *Cold Audience*, memang kos CAC melambung mahal. Nak bagi murah? Target dekat prospek (Warm Audience) yang memang suka layan video organik anda.</p>
+                    <h2>Strategi Organik ke Paid Ads</h2>
+                    <p>Mula-mula, biar audiens layan dulu <em>Content</em> bersiri anda secara percuma (jangan jual apa-apa). Benda ni dah ajar kat <a href="javascript:void(0)" onclick="readMore(29); return false;" class="text-brand-red font-bold hover:underline">Buat Episodic Themed Show Kat Social Media</a>.</p>
+                    <p>Bila data dorang dah masuk pixel, baru set Ads (Retargeting) tembak iklan pakej terus ke dorang yang dah tengok lebih 50% video tu. Memang <em>Conversion Rate</em> akan gila punya tinggi dan murah. Pastu, nak report ROAS ni kat bos, check balik format <a href="javascript:void(0)" onclick="readMore(23); return false;" class="text-brand-red font-bold hover:underline">Bina Profit-Focused Report</a>.</p>
+                    <div class="bg-brand-light p-6 border-l-4 border-brand-navy my-8 rounded-r-lg">
+                        <h4 class="font-bold text-brand-navy mb-2">Penutup Modul Digital</h4>
+                        <p>Dah habis baca pasal media sosial? Boleh start review balik modul <a href="javascript:void(0)" onclick="readMore(11); return false;" class="text-brand-red font-bold hover:underline">Asas SEO Yang Kukuh</a> atau tengok info penting tentang masa depan kat <a href="javascript:void(0)" onclick="readMore(1); return false;" class="text-brand-red font-bold hover:underline">Macam Mana AI Search Engine Guna RAG</a>.</p>
+                    </div>
+                ` 
+            },
+            { 
+                id: 31, category: "Pembangunan Web", 
+                title: "4 Sebab Utama Anda Perlukan Website (Penting ke untuk Bisnes?)", 
+                excerpt: "Masih bergantung kat FB atau TikTok je? Baca kenapa Website ni hartanah digital terpenting untuk branding jangka panjang.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Perlu+Website", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Banyak bisnes susah nak *scale-up* sebab cuma menumpang di tapak orang (macam social media). Ada <strong>Website</strong> sendiri bermaksud anda ada hartanah digital mutlak.</p>
+                    <h2>Kenapa Website Ni Penting Sangat?</h2>
+                    <ol>
+                        <li><strong>Platform Marketing Utama:</strong> Algorithm media sosial selalu sekat reach post kita. Website ni kira hab rasmi di mana anda 100% control cara nak buat <strong>Branding</strong>.</li>
+                        <li><strong>Bina Trust Prospek:</strong> Prospek sekarang mesti akan Google dulu sebelum beli. (Belajar <a href="javascript:void(0)" onclick="readMore(11); return false;" class="text-brand-red font-bold hover:underline">3 Step Realistic Untuk Rank Tinggi</a>). Takde website nampak bisnes tu cincai.</li>
+                        <li><strong>Kedai Online 24/7:</strong> Website ni kira kedai yang tak pernah tutup, dia tolong collect <em>Sales</em> masa anda tengah tidur.</li>
+                        <li><strong>Tempat Buat SEO:</strong> Anda tak boleh buat SEO teknikal kat profile Instagram. SEO kena buat kat website.</li>
+                    </ol>
+                    <h2>Apa Benda Asas Kena Ada?</h2>
+                    <p>Nak mula, anda wajib beli <strong>Domain</strong> (nama website macam websaya.xyz) dan sewa <strong>Hosting</strong> (server simpan data). Provider lokal macam <strong>Exabytes</strong> ada tawarkan pakej harga berpatutan untuk founder yang baru nak bermula.</p>
+                ` 
+            },
+            { 
+                id: 32, category: "Pembangunan Web", 
+                title: "Kenapa Kena Upah Web Designer Profesional?", 
+                excerpt: "Jangan jahanamkan nama brand dengan template murahan. Web Designer tahu macam mana nak bagi 'Wow Faktor'.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Upah+Designer", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Memang betul anda boleh DIY buat website sendiri. Tapi kalau nak convert pelawat jadi pembeli, perlukan sentuhan pro seorang <strong>Web Designer</strong>.</p>
+                    <h2>Lebih Dari Sekadar Benda Cantik</h2>
+                    <p>Seorang profesional bukan just tengok <strong>Design</strong>, dorang tahu psikologi nak suruh pelawat tekan butang beli. Kalau pakai servis amatur je, website mungkin hidup tapi tak menarik langsung.</p>
+                    <ul>
+                        <li><strong>Wow Faktor:</strong> Designer pandai main warna dan *spacing* supaya bila orang masuk je terus rasa <em>Trust</em> kat brand tu.</li>
+                        <li><strong>Skill UI/UX:</strong> Susun letak info dengan kemas supaya prospek senang nak cari info harga atau tekan butang Whatsapp.</li>
+                        <li><strong>Gabung Coding:</strong> Dorang tahu selok-belok teknikal (refer <a href="javascript:void(0)" onclick="readMore(17); return false;" class="text-brand-red font-bold hover:underline">Asas Technical SEO</a>) supaya website laju kat handphone.</li>
+                    </ul>
+                    <p>Labur sikit untuk website bermakna anda bina <em>Platform Marketing</em> yang dah siap di-optimize untuk tingkatkan <em>Conversion Rate</em>.</p>
+                ` 
+            },
+            { 
+                id: 33, category: "Pembangunan Web", 
+                title: "Servis Buat Website Agency: Cara Pilih Supaya Tak Tertipu", 
+                excerpt: "Panduan tapis Web Designer atau Agency: check portfolio, harga, hak admin, dan tahap Support lepas website siap.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Pilih+Agency", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Market sekarang berlambak dengan <strong>Agency</strong> dan freelancer yang offer servis buat website. Silap pilih, melayang beribu ringgit.</p>
+                    <h2>Checklist Sebelum Bayar Deposit Agency</h2>
+                    <p>Sebelum sign apa-apa, pastikan anda check point ni betul-betul:</p>
+                    <ol>
+                        <li><strong>Usha Portfolio Dorang:</strong> Jangan percaya cakap je. Minta tengok link website klien sebenar yang dorang pernah buat. Nampak pro atau macam template *free*?</li>
+                        <li><strong>Bagi Support Lepas Siap?:</strong> Kalau tiba-tiba website down lepas 3 bulan macam mana? Pastikan ada pakej *maintenance* sekali.</li>
+                        <li><strong>Harga Telus:</strong> Harga tu lump sum ke, atau ada *hidden charge* bulan-bulan? Kena clarify.</li>
+                        <li><strong>Dapat Full Access:</strong> Ni paling bahaya. Bila website siap, pastikan anda dapat 100% <em>Admin Access</em> (cPanel dan domain) supaya tak dikawal oleh agency tu kelak.</li>
+                        <li><strong>Boleh Buat Conversion?:</strong> Laman web cantik tak guna kalau susah nak buat sales. Agency kena tahu baca data matriks (boleh baca kat <a href="javascript:void(0)" onclick="readMore(22); return false;" class="text-brand-red font-bold hover:underline">Kenapa Website Traffic Cuma Vanity Metric</a>).</li>
+                    </ol>
+                ` 
+            },
+            { 
+                id: 34, category: "Pembangunan Web", 
+                title: "Web Design vs Web Development – Apa Bezanya?", 
+                excerpt: "Ramai yang keliru dua jawatan ni. Fahami apa itu UI/UX, Mockup, Frontend, Backend, dan bahasa Coding.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Design+vs+Dev", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Terma <strong>Web Design</strong> dan <strong>Web Development</strong> selalu orang guna campur-campur, tapi hakikatnya dorang buat dua skop kerja yang totally berbeza.</p>
+                    <h2>Tugas Web Designer (Fokus Rupa & Flow)</h2>
+                    <p>Orang *design* ni buat kerja yang melibatkan kecantikan dan flow pelawat. Dorang uruskan:</p>
+                    <ul>
+                        <li><strong>UI/UX:</strong> Pastikan flow menu dan butang tu user-friendly.</li>
+                        <li><strong>Mockup:</strong> Lukis bentuk website pakai perisian (macam Figma) sebelum dihidupkan kat internet.</li>
+                    </ul>
+                    
+                    <h2>Tugas Web Developer (Fokus Enjin / Coding)</h2>
+                    <p>Bila *Mockup* dah confirm, <strong>Web Developer</strong> yang akan start menaip barisan <strong>Coding</strong> untuk jadikan ia website yang betul-betul berfungsi.</p>
+                    <ul>
+                        <li><strong>Frontend:</strong> Bahagian depan yang kita klik-klik tu. Biasanya pakai bahasa HTML, CSS, JavaScript.</li>
+                        <li><strong>Backend:</strong> Bahagian belakang tabir (database dan server). Selalu pakai PHP atau Python.</li>
+                    </ul>
+                    <p>Faham benda basic ni senang sikit kalau nak suruh developer edit coding untuk SEO AI macam yang diterang kat <a href="javascript:void(0)" onclick="readMore(3); return false;" class="text-brand-red font-bold hover:underline">Format Website Untuk Tree-Walking Algorithm</a>.</p>
+                ` 
+            },
+            { 
+                id: 35, category: "Pembangunan Web", 
+                title: "Pilih Domain Dan Hosting Yang Betul Untuk Pemula", 
+                excerpt: "Langkah pertama untuk founder sebelum buat website: beli nama Domain dan sewa server Hosting yang power.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Domain+Hosting", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Ibaratkan <strong>Domain</strong> tu sebagai papan tanda nama kedai, dan <strong>Hosting</strong> tu keluasan tanah tempat anda pacak kedai kat internet tu.</p>
+                    <h2>Pilih Nama Domain</h2>
+                    <p>Cari nama yang pendek, senang orang nak taip, dan melambangkan brand syarikat. Kalau target market dalam Malaysia, elok ambil yang hujung dia ".com.my" atau ".my" supaya senang Google local SEO rankkan website tu.</p>
+                    <h2>Sewa Server (Hosting)</h2>
+                    <p>Tak kisah la ambil server oversea atau lokal macam <strong>Exabytes</strong>, pastikan ia datang sekali dengan sijil SSL dan pakej kelajuan (bandwidth) yang cun. Website kena loading laju untuk lepas ujian <a href="javascript:void(0)" onclick="readMore(17); return false;" class="text-brand-red font-bold hover:underline">Asas Technical SEO</a> Google.</p>
+                    <p>Kalau nak start serius dengan <em>Marketing Platform</em> rasmi ni, pemilihan asas teknikal ni kena buat bebetul dari hari pertama.</p>
+                ` 
+            },
+            { 
+                id: 36, category: "Pembangunan Web", 
+                title: "UI/UX: Buat 'Wow Faktor' Yang Confirm Convert", 
+                excerpt: "Design cantik belum tentu convert. Susunan UI/UX yang betul tak buat pelawat pening dan mudahkan proses dorang nak membeli.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=UI+UX+Design", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Banyak bisnes syok sendiri buat design berbunga-bunga tapi lupa pasal flow pelawat. Kat sinilah letaknya fungsi <strong>UI/UX</strong> sebenar.</p>
+                    <h2>User Experience (UX)</h2>
+                    <p>UX ni seni untuk pastikan prospek tak sesat. Kalau prospek nak kena tekan sampai 3-4 kali baru jumpa senarai harga servis, itu tandanya UX website anda kelaut.</p>
+                    <h2>User Interface (UI)</h2>
+                    <p>Part ni pula pasal bawa masuk emosi dan <strong>Wow Faktor</strong>. Pilihan tulisan yang besar dan bold, kombinasi warna yang premium, dan efek lawa bila *hover* kat butang "Hubungi Kami".</p>
+                    <p>Bila sentuhan <strong>Web Designer</strong> bersatu dengan objektif pemasaran yang tepat, senang nak tangkap audiens ikut <a href="javascript:void(0)" onclick="readMore(12); return false;" class="text-brand-red font-bold hover:underline">Search Intent</a> dorang.</p>
+                ` 
+            },
+            { 
+                id: 37, category: "Pembangunan Web", 
+                title: "Setup Kedai Online Yang Boleh Collect Sales Autopilot", 
+                excerpt: "Upgrade dari berniaga manual balas WhatsApp ke sistem E-Commerce yang proses order pukul 3 pagi tanpa henti.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Kedai+Online", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Masih gigih reply mesej PM satu-satu kul 2 pagi? Masa untuk upgrade bisnes anda jadi satu sistem e-Commerce yang jalan secara automatik.</p>
+                    <h2>Ekosistem Kedai Online</h2>
+                    <p>Sistem e-Commerce yang bagus akan gabungkan katalog produk, butang *Add to Cart*, dan *Payment Gateway* (macam ToyyibPay atau Billplz) terus dalam satu <strong>Website</strong>.</p>
+                    <p>Bukan je senangkan buyer, kalau kategori produk tu disusun cantik, benda tu akan tolong boost <a href="javascript:void(0)" onclick="readMore(13); return false;" class="text-brand-red font-bold hover:underline">Content Cluster</a> SEO website anda juga.</p>
+                    <p>Make sure syarikat <strong>Agency</strong> ajar cara guna sistem admin (backend) supaya senang anda nak check stok dan *update* tracking order klien nanti.</p>
+                ` 
+            },
+            { 
+                id: 38, category: "Pembangunan Web", 
+                title: "Mitos Kos Buat Website: Belanja Atau Pelaburan?", 
+                excerpt: "Faham kenapa agency caj beribu ringgit untuk buat website berbanding upah buat murah RM300 yang merugikan.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Kos+Website", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">"Boleh tak buat website cincai RM300 je?". Ni antara soalan paling famous founder suka tanya. Dalam industri buat website, kualiti yang anda bayar, *Sales* itulah yang anda dapat.</p>
+                    <h2>Kenapa Agency Pro Caj Harga Premium?</h2>
+                    <p>Minta kurang harga kaw-kaw selalunya end up dapat hasil kerja *copy-paste* template basi. <strong>Web Designer</strong> yang betul akan charge mahal sebab dorang siapkan benda ni:</p>
+                    <ul>
+                        <li>Strategi flow jualan yang betul.</li>
+                        <li>Lukis <strong>Mockup</strong> custom, bukan kitar semula design klien lama.</li>
+                        <li>Setelkan sistem *Security* database.</li>
+                        <li>Ada <strong>Support</strong> *maintenance* lepas web dilancarkan.</li>
+                    </ul>
+                    <p>Anggap benda ni sebagai pelaburan buka cawangan kedai baru. Kalau nak tahu untung ke tak, rujuk cara kira kat <a href="javascript:void(0)" onclick="readMore(23); return false;" class="text-brand-red font-bold hover:underline">Bina Profit-Focused Report Untuk Pihak Pengurusan</a>.</p>
+                ` 
+            },
+            { 
+                id: 39, category: "Pembangunan Web", 
+                title: "Bila Coding Backend Berterabur, SEO Pun Hancur", 
+                excerpt: "Struktur sistem kat bahagian server sangat bagi impak kat Core Web Vitals. Jangan tertipu dengan design depan lawa je.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Backend+Coding", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Ramai founder ingat <strong>SEO</strong> ni just tulis artikel dan main keyword je. Sebenarnya struktur *Backend* atau sistem pelayan kat belakang memainkan peranan super kritikal.</p>
+                    <h2>Data Kena Tarik Laju</h2>
+                    <p>Bila <strong>Web Developer</strong> taip sistem guna <strong>PHP</strong> atau Node.js, <strong>Coding</strong> tu kena kemas supaya data loading tak sangkut bila pelawat masuk website.</p>
+                    <p>Kalau skrip serabut dan pasang plugin merapu banyak sangat, website akan jadi *heavy*. Google cukup pantang website loading lambat, confirm jatuh page belakang. Sebab tu *clean coding* sangat ditekankan bila nak *optimize* untuk AI kat <a href="javascript:void(0)" onclick="readMore(3); return false;" class="text-brand-red font-bold hover:underline">Format Website Untuk Tree-Walking Algorithm</a>.</p>
+                ` 
+            },
+            { 
+                id: 40, category: "Pembangunan Web", 
+                title: "Bina Portfolio Website Untuk Deal Projek B2B Besar", 
+                excerpt: "Kalau bisnes target klien korporat, website ni ibarat resume paling mahal untuk yakinkan dorang bagi tender bernilai tinggi.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Portfolio+Web", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Lain dengan B2C (jual direct ke orang awam), kalau anda buat bisnes B2B (syarikat deal dengan syarikat), dorang 100% akan nilai anda dari bukti kerja dan <strong>Portfolio</strong> lepas.</p>
+                    <h2>Yakinkan Klien Guna E-E-A-T</h2>
+                    <p>Anda perlukan website yang nampak 'megah' untuk kumpul koleksi projek. Guna <em>Website</em> ni untuk paparkan testimoni klien besar korporat, sijil pengiktirafan rasmi dan kesimpulan macam mana anda *solve* masalah klien sebelum ni.</p>
+                    <p>Secara tak sedar, amalan ni akan bantu website anda lulus cemerlang dalam piawaian Google EEAT (boleh baca lanjut topik ni kat <a href="javascript:void(0)" onclick="readMore(15); return false;" class="text-brand-red font-bold hover:underline">Tunjuk E-E-A-T (Pengalaman Pakar)</a>).</p>
+                    <div class="bg-brand-light p-6 border-l-4 border-brand-navy my-8 rounded-r-lg">
+                        <h4 class="font-bold text-brand-navy mb-2">Penamat Siri Digital Premium</h4>
+                        <p>Kini anda dah nampak gambar besar keseluruhan strategi ni. Dari rahsia nak 'tackle' AI kat artikel <a href="javascript:void(0)" onclick="readMore(1); return false;" class="text-brand-red font-bold hover:underline">Macam Mana AI Search Engine Guna RAG</a> sehinggalah betapa pentingnya labur bajet untuk lantik web developer power bina bisnes anda hari ni.</p>
+                    </div>
+                ` 
+            },
+            { 
+                id: 41, category: "Pembangunan Web", 
+                title: "Cari Website Developer Atau Website Designer Terbaik Di Kuala Lumpur & Putrajaya", 
+                excerpt: "Bisnes di tengah bandar perlukan platform digital yang kuat. Ini cara pilih pakar yang bantu meroketkan Sales syarikat anda.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Web+KL+Putrajaya", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Bila bisnes anda berpusat di lokasi yang sibuk, persaingan memang sangat tinggi. Sebab tu anda wajib cari <strong>website developer atau website designer terbaik di Kuala Lumpur dan Putrajaya</strong> untuk nampak lebih menonjol dari pesaing.</p>
+                    <h2>Kenapa Kena Cari Pakar Kawasan Bandar?</h2>
+                    <p>Bila anda upah agency yang ada ofis berdekatan, senang nak buat *meeting* bersemuka. Bincang bajet, design, dan target <em>Marketing</em> jadi lebih jelas bila boleh jumpa depan-depan.</p>
+                    <p>Tapi ingat, jangan main semberono pilih. Baca dulu panduan <a href="javascript:void(0)" onclick="readMore(33); return false;" class="text-brand-red font-bold hover:underline">Cara Pilih Agency Supaya Tak Tertipu</a> sebelum bayar deposit kepada dorang.</p>
+                    <h2>Fokus Kepada Conversion Rate</h2>
+                    <ul>
+                        <li><strong>Susun Strategi Leads:</strong> Bukan sekadar website cantik, tapi sistem yang boleh kumpul database pelanggan secara automatik.</li>
+                        <li><strong>Ranking Google:</strong> Bantu syarikat anda keluar kat muka surat pertama bila prospek cari servis anda.</li>
+                    </ul>
+                ` 
+            },
+            { 
+                id: 42, category: "Pembangunan Web", 
+                title: "Panduan Upah Website Developer Atau Website Designer Terbaik Di Selangor", 
+                excerpt: "Selangor adalah lubuk market besar. Pastikan anda pilih pembangun laman web yang faham strategi Marketing dan pasaran tempatan.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Web+Selangor", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Sebagai pusat ekonomi utama, saiz pasaran di sini sangat besar. Mempunyai khidmat <strong>website developer atau website designer terbaik di Selangor</strong> adalah tiket emas untuk kuasai pelanggan setempat.</p>
+                    <h2>Pentingnya Sentuhan Profesional</h2>
+                    <p>Orang bisnes selalu buat silap cuba jimat kos dengan DIY (buat sendiri). Hasilnya, pelawat masuk website tapi tak tekan butang beli. Seorang pro tahu macam mana nak bina <em>Trust</em> dari susun atur gambar sehinggalah ke butang WhatsApp.</p>
+                    <p>Nak tahu beza hasil amatur dengan pro? Rujuk penerangan lengkap kat <a href="javascript:void(0)" onclick="readMore(32); return false;" class="text-brand-red font-bold hover:underline">Kenapa Kena Upah Web Designer Profesional</a>.</p>
+                    <h2>Pakej Yang Patut Anda Minta</h2>
+                    <p>Bila berurusan dengan *agency* di Selangor, pastikan sebut harga mereka merangkumi kelajuan loading dan juga mesra handphone supaya tak mengganggu <em>Sales</em> harian anda.</p>
+                ` 
+            },
+            { 
+                id: 43, category: "Pembangunan Web", 
+                title: "Senarai Semak Website Developer Atau Website Designer Terbaik Di Johor", 
+                excerpt: "Bagi founder di Selatan, ini ciri-ciri agensi buat website yang boleh bantu anda luaskan pasaran sampai ke Singapore.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Web+Johor", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Bisnes di Selatan Semenanjung ada potensi unik sebab boleh tarik pelanggan dari negara jiran. Jadi, <strong>website developer atau website designer terbaik di Johor</strong> adalah rakan bisnes terpenting anda.</p>
+                    <h2>Sistem E-Commerce Untuk Pasaran Luar</h2>
+                    <p>Bila target pasaran luar, anda perlukan sistem yang boleh terima bayaran kad kredit dan multi-matawang (currency). Ini bukan tugas yang boleh dibuat pakai template murah.</p>
+                    <p>Boleh check asas bina sistem ni kat artikel <a href="javascript:void(0)" onclick="readMore(37); return false;" class="text-brand-red font-bold hover:underline">Setup Kedai Online Collect Sales Autopilot</a>.</p>
+                    <h2>Anggap Ia Pelaburan</h2>
+                    <p>Jangan mudah terkejut dengan harga. Website e-Commerce yang stabil tak murah, tapi pulangan dia sangat berbaloi bila order masuk bertali arus. Kalau ragu-ragu bab bajet, baca <a href="javascript:void(0)" onclick="readMore(38); return false;" class="text-brand-red font-bold hover:underline">Mitos Kos Buat Website: Belanja Atau Pelaburan</a>.</p>
+                ` 
+            },
+            { 
+                id: 44, category: "Pembangunan Web", 
+                title: "Pilih Website Developer Atau Website Designer Terbaik Di Pulau Pinang", 
+                excerpt: "Nak bisnes nampak gah kat belah Utara? Dapatkan servis rekaan website yang betul-betul boleh convert pelawat jadi pembeli.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Web+Pulau+Pinang", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Dikenali sebagai hab teknologi dan pelancongan, persaingan di utara sangat laju. Kalau anda dapat cari <strong>website developer atau website designer terbaik di Pulau Pinang</strong>, separuh masalah <em>Marketing</em> dah selesai.</p>
+                    <h2>Keseimbangan Design Dan Sistem</h2>
+                    <p>Banyak website lawa gila tapi loading macam siput. Pelawat pantang tunggu lama, dorang akan terus tutup. Anda perlukan gabungan orang yang pandai buat *Design* dan *Coding* sistem belakang.</p>
+                    <p>Masih keliru beza dua bidang ni? Rujuk penjelasan kat <a href="javascript:void(0)" onclick="readMore(34); return false;" class="text-brand-red font-bold hover:underline">Web Design vs Web Development</a> supaya anda tahu siapa nak diupah.</p>
+                    <h2>Bina Branding Kukuh</h2>
+                    <ul>
+                        <li>Pastikan *agency* letak info bisnes anda dengan tepat.</li>
+                        <li>Pastikan portfolio projek lepas dorang menepati *standard* syarikat anda.</li>
+                    </ul>
+                ` 
+            },
+            { 
+                id: 45, category: "Pembangunan Web", 
+                title: "Upah Website Developer Atau Website Designer Terbaik Di Perak", 
+                excerpt: "Bisnes kat Perak makin meriah. Jangan tertinggal, bina website rasmi syarikat dengan pakar yang faham selok-belok penjenamaan.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Web+Perak", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Sektor industri dan Makanan & Minuman (F&B) makin berkembang pesat. Untuk kekal relevan, anda perlukan khidmat <strong>website developer atau website designer terbaik di Perak</strong> untuk tarik pelanggan.</p>
+                    <h2>Kenapa Perlu Website Walaupun Ada Facebook?</h2>
+                    <p>Facebook dan TikTok tu bagus untuk viral, tapi *Trust* sebenar datang bila prospek Google nama kedai anda dan jumpa portal rasmi. Website ni ibarat bangunan hartanah digital anda sendiri.</p>
+                    <p>Kupas lebih lanjut kelebihan benda ni kat artikel <a href="javascript:void(0)" onclick="readMore(31); return false;" class="text-brand-red font-bold hover:underline">4 Sebab Utama Anda Perlukan Website</a>.</p>
+                    <h2>Apa Yang Pakar Boleh Tolong?</h2>
+                    <p>Selain buat web cantik, dorang boleh *setup* sistem tempahan, *integrate* butang terus ke WhatsApp, dan letak kod pixel untuk tujuan iklan <em>Marketing</em> nanti.</p>
+                ` 
+            },
+            { 
+                id: 46, category: "Pembangunan Web", 
+                title: "Cari Website Developer Atau Website Designer Terbaik Di Melaka & Negeri Sembilan", 
+                excerpt: "Kawasan pelancongan dan industri perlukan sistem web yang laju. Ini cara pilih pakar yang boleh tolong tingkatkan tempahan bisnes anda.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Web+Melaka+NS", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Kawasan yang kaya dengan pusat peranginan dan sektor pembuatan memang sentiasa cari <em>Leads</em> baru. Dapatkan khidmat <strong>website developer atau website designer terbaik di Melaka dan Negeri Sembilan</strong> untuk mudahkan kerja anda.</p>
+                    <h2>Kepentingan User Interface (UI)</h2>
+                    <p>Bila pelanggan masuk website homestay atau pakej percutian anda, dorang nak info yang ringkas dan padat. Kat sinilah kemahiran *User Experience* (UX) main peranan besar.</p>
+                    <p>Kalau menu website serabut, prospek lari. Belajar macam mana nak elak masalah ni kat <a href="javascript:void(0)" onclick="readMore(36); return false;" class="text-brand-red font-bold hover:underline">UI/UX: Buat 'Wow Faktor' Yang Confirm Convert</a>.</p>
+                    <h2>Urusan Jadi Mudah</h2>
+                    <p>Pilih *agency* yang boleh bagi sokongan (*support*) pantas kalau sistem *down*. Tanya betul-betul masa *meeting* sama ada dorang *cover maintenance* bulanan atau tak.</p>
+                ` 
+            },
+            { 
+                id: 47, category: "Pembangunan Web", 
+                title: "Servis Website Developer Atau Website Designer Terbaik Di Kedah & Perlis", 
+                excerpt: "Untuk usahawan di Utara, memiliki kedai online atau portal profil syarikat adalah langkah pertama untuk letupkan Sales tanpa henti.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Web+Kedah+Perlis", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Potensi bisnes di Utara makin mekar, terutamanya produk PKS dan kraf tempatan. Anda perlukan <strong>website developer atau website designer terbaik di Kedah dan Perlis</strong> untuk bawa produk ni ke seluruh Malaysia.</p>
+                    <h2>Kelajuan Adalah Segalanya</h2>
+                    <p>Tak kira sejauh mana lawa website tu, kalau *Coding Backend* dia berat, pelanggan akan terus pangkah. Pastikan developer yang anda upah pandai *optimize* kelajuan server.</p>
+                    <p>Kenapa kelajuan ni bagi impak pada SEO? Rujuk penjelasan teknikal kat <a href="javascript:void(0)" onclick="readMore(39); return false;" class="text-brand-red font-bold hover:underline">Bila Coding Backend Berterabur, SEO Hancur</a>.</p>
+                    <h2>Pilih Nama Domain Bertepatan</h2>
+                    <p>Pastikan nama alamat (Domain) web anda senang ditaip. Minta nasihat dari *agency* untuk pilih pelayan *Hosting* lokal yang tahan lasak dan tak mudah *crash* bila trafik laju masuk.</p>
+                ` 
+            },
+            { 
+                id: 48, category: "Pembangunan Web", 
+                title: "Pilih Website Developer Atau Website Designer Terbaik Di Kelantan, Terengganu & Pahang", 
+                excerpt: "Kuasai market Pantai Timur dengan membina platform website rasmi syarikat yang dipercayai oleh pelanggan setempat.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Web+Pantai+Timur", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Orang bisnes Pantai Timur terkenal dengan gaya berniaga yang rajin. Untuk kembangkan sayap lebih jauh, melantik <strong>website developer atau website designer terbaik di Kelantan, Terengganu dan Pahang</strong> adalah jalan pintas yang selamat.</p>
+                    <h2>Bina 'Trust' Pelanggan</h2>
+                    <p>Dalam dunia online, wujud masalah kes penipuan (scam). Memiliki website syarikat yang profesional dengan profil lengkap akan meredakan rasa ragu-ragu pelanggan baru terhadap bisnes anda.</p>
+                    <p>Cara nak buktikan bisnes anda ni tulen pada Google dan pelanggan boleh dibaca kat <a href="javascript:void(0)" onclick="readMore(15); return false;" class="text-brand-red font-bold hover:underline">Tunjuk E-E-A-T (Pengalaman Pakar)</a>.</p>
+                    <h2>Fokus Sistem Yang Senang Guna</h2>
+                    <p>Minta developer buat *admin dashboard* yang anda dan staf senang nak *update* produk atau harga tanpa perlu tulis kod rumit.</p>
+                ` 
+            },
+            { 
+                id: 49, category: "Pembangunan Web", 
+                title: "Cari Website Developer Atau Website Designer Terbaik Di Sabah & Labuan", 
+                excerpt: "Atasi masalah jarak logistik dengan website E-Commerce. Ini panduan mencari pembangun web yang pakar di Sabah Borneo.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Web+Sabah+Labuan", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Kekangan jarak tak patut halang <em>Sales</em> anda. Dengan bantuan <strong>website developer atau website designer terbaik di Sabah dan Labuan</strong>, produk tempatan boleh ditempah klien Semenanjung dengan mudah.</p>
+                    <h2>Penyelesaian Asas Teknikal</h2>
+                    <p>Sabah ada geografi yang luas, jadi capaian internet mungkin berbeza-beza bagi setiap pengguna. Website syarikat anda kena cukup ringan dan mesra-mobile (cantik kat skrin handphone) supaya orang senang layari web tu walau di mana dorang berada.</p>
+                    <p>Pastikan *agency* tu ikut syarat teknikal yang ditetapkan Google. Boleh *check* list tu kat <a href="javascript:void(0)" onclick="readMore(17); return false;" class="text-brand-red font-bold hover:underline">Asas Technical SEO: SSL, Mobile, Page Speed</a>.</p>
+                    <h2>Tarik Leads Secara Organik</h2>
+                    <p>Website yang dibina dengan betul dari hari pertama akan mudahkan proses nak ranking kat Google (SEO) berbanding web yang guna *template free*.</p>
+                ` 
+            },
+            { 
+                id: 50, category: "Pembangunan Web", 
+                title: "Pilihan Website Developer Atau Website Designer Terbaik Di Sarawak", 
+                excerpt: "Pasaran Bumi Kenyalang sangat luas. Dapatkan pakar bina website tempatan yang pandai susun struktur yang menghasilkan Conversion yang tinggi.", 
+                image: "https://placehold.co/600x400/4f46e5/ffffff?text=Web+Sarawak", 
+                content: `
+                    <p class="lead text-xl font-medium text-slate-600 mb-8 border-l-4 border-brand-red pl-4">Syarikat dan PKS di Sarawak sedang melangkah laju ke arah digital. Pastikan *Marketing* anda berbaloi dengan memilih khidmat <strong>website developer atau website designer terbaik di Sarawak</strong>.</p>
+                    <h2>Lebih Dari Sekadar Kad Bisnes Digital</h2>
+                    <p>Website korporat bukan sekadar letak nama alamat je. Ia adalah jurujual *online* yang kumpul *Leads* (borang maklumat prospek) 24 jam sehari. Oleh itu, sistem pangkalan data (*database*) kena selamat.</p>
+                    <p>Untuk urusan projek korporat atau kerajaan (B2B), website ni memang syarat wajib. Tengok betapa pentingnya ia kat <a href="javascript:void(0)" onclick="readMore(40); return false;" class="text-brand-red font-bold hover:underline">Bina Portfolio Website Untuk Deal Projek Besar</a>.</p>
+                    <h2>Kesimpulan Pemilihan Pakar</h2>
+                    <ul>
+                        <li>Pastikan pakar tu bagi Hak Milik Penuh (Full Access) kepada anda.</li>
+                        <li>Pastikan harga sepadan dengan bajet.</li>
+                        <li>Jangan segan minta dorang buat taklimat ajar guna website tu lepas siap.</li>
+                    </ul>
+                ` 
+            }
+        ];
+
+        function renderIndex(categoryFilter = 'All') {
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = '';
+            
+            const filteredArticles = categoryFilter === 'All' 
+                ? articlesData 
+                : articlesData.filter(a => a.category === categoryFilter);
+
+            filteredArticles.forEach(article => {
+                // Set color theme per category for badges
+                let badgeColor = 'bg-slate-500';
+                if(article.category.includes('AI')) badgeColor = 'bg-brand-navy';
+                if(article.category.includes('SEO')) badgeColor = 'bg-brand-red';
+                if(article.category.includes('Metrik')) badgeColor = 'bg-brand-gold';
+                if(article.category.includes('Sosial')) badgeColor = 'bg-teal-600';
+                if(article.category.includes('Pembangunan')) badgeColor = 'bg-indigo-600';
+
+                const cardHTML = `
+                    <div class="bg-white rounded-2xl shadow-premium border border-slate-200 overflow-hidden flex flex-col h-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                            <div class="absolute top-4 left-4 ${badgeColor} text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                                ${article.category}
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-heading font-bold text-xl text-brand-navy mb-3 line-clamp-2">${article.title}</h3>
+                            <p class="text-slate-600 text-sm mb-6 flex-grow line-clamp-3">${article.excerpt}</p>
+                            <button onclick="readMore(${article.id})" class="inline-flex items-center text-brand-red font-semibold hover:text-brand-redhover transition-colors mt-auto group">
+                                Baca Lanjut 
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += cardHTML;
+            });
+        }
+
+        function filterCategory(category) {
+            // Update Active button styles
+            const buttons = document.querySelectorAll('#category-filters button');
+            buttons.forEach(btn => {
+                if(btn.textContent.includes(category) || (category === 'All' && btn.textContent === 'Semua Topik')) {
+                    btn.className = 'px-6 py-2 rounded-full bg-brand-navy text-white font-medium text-sm transition-colors shadow-md';
+                } else {
+                    btn.className = 'px-6 py-2 rounded-full bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 font-medium text-sm transition-colors shadow-sm';
+                }
+            });
+            renderIndex(category);
+        }
+
+        function readMore(id) {
+            const article = articlesData.find(a => a.id === id);
+            if(!article) return;
+
+            // Populate View
+            document.getElementById('view-category').textContent = article.category;
+            document.getElementById('view-title').textContent = article.title;
+            document.getElementById('view-content').innerHTML = article.content;
+            
+            // Handle SEO Meta Display (for demonstration purposes on Article 1)
+            const metaBox = document.getElementById('seo-meta-box');
+            if(article.meta) {
+                metaBox.classList.remove('hidden');
+                document.getElementById('meta-keyword').textContent = article.meta.keyword;
+                document.getElementById('meta-intent').textContent = article.meta.intent;
+                document.getElementById('meta-desc').textContent = article.meta.desc;
+            } else {
+                metaBox.classList.add('hidden');
+            }
+
+            // Transition Views
+            document.getElementById('index-view').classList.add('hidden');
+            document.getElementById('article-view').classList.remove('hidden');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showIndex() {
+            document.getElementById('article-view').classList.add('hidden');
+            document.getElementById('index-view').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize on load
+        window.onload = () => {
+            renderIndex();
+        };
+    </script>
+</body>
+</html>
