@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - Websaya.xyz</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#0f172a',
+                            red: '#dc2626',
+                            redhover: '#b91c1c',
+                            gold: '#f59e0b',
+                            light: '#f8fafc',
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 40px -10px rgba(15, 23, 42, 0.1)',
+                        'glow': '0 0 20px rgba(220, 38, 38, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .font-heading { font-family: 'Poppins', sans-serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dc2626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b91c1c;
+        }
+
+        /* Transition for T&C Collapse */
+        #tc-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
+            opacity: 0;
+        }
+        #tc-content.expanded {
+            max-height: 15000px; /* Large enough to fit all content */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-sans bg-brand-light text-slate-800 antialiased selection:bg-brand-red selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 right-0 h-20 bg-white/95 backdrop-blur-md border-b border-slate-200 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+            <!-- Logo Only -->
+            <a href="#" class="flex items-center space-x-2">
+                <span class="font-heading font-extrabold text-2xl tracking-tight text-brand-navy">
+                    Websaya<span class="text-brand-red">.xyz</span>
+                </span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (DARK BACKGROUND) -->
+    <header class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-brand-navy text-white overflow-hidden">
+        <!-- Abstract glowing backgrounds -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-red/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-brand-gold/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <!-- Title -->
+            <h1 class="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight mb-2">
+                Polisi & <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-400">Terma Perkhidmatan</span>
+            </h1>
+        </div>
+    </header>
+
+    <!-- INTRODUCTORY & COMPACT T&C SECTION -->
+    <section id="terma-syarat" class="py-12 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-light rounded-2xl p-6 md:p-10 border border-slate-200/80 shadow-premium transition-all duration-300">
+                <div class="flex items-center space-x-3 mb-6">
+                    <span class="p-2 rounded-lg bg-red-50 text-brand-red">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </span>
+                    <h2 class="font-heading font-bold text-xl sm:text-2xl text-brand-navy">📄 Terms & Conditions by Websaya.xyz</h2>
+                </div>
+
+                <p class="text-slate-700 text-base sm:text-lg leading-relaxed mb-8">
+                    Dengan membuat pembayaran, anda dianggap telah <span class="font-bold text-brand-red">Membaca, Memahami, dan Bersetuju</span> dengan semua Terma dan Syarat berikut:
+                </p>
+
+                <!-- COLLAPSE CONTROLLER & FADE OUT WRAPPER -->
+                <div id="tc-teaser" class="relative">
+                    <div id="fade-overlay" class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-brand-light to-transparent pointer-events-none transition-opacity duration-500"></div>
+                    
+                    <!-- BUTTON TO EXPAND -->
+                    <div class="flex justify-center py-4 relative z-20">
+                        <button id="toggle-tc-btn" onclick="toggleTC()" class="inline-flex items-center space-x-3 px-8 py-4 rounded-full bg-brand-red text-white hover:bg-brand-redhover font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-glow">
+                            <span>SAMBUNG BACA T&C PENUH</span>
+                            <svg id="chevron-icon" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- EXPANDABLE FULL TERMS CONTENT -->
+                <div id="tc-content" class="mt-8 pt-8 border-t border-slate-200">
+                    <div class="space-y-10 text-slate-700 leading-relaxed text-sm sm:text-base">
+
+                        <!-- 1. Skop Servis -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">1</span>
+                                Skop Servis
+                            </h3>
+                            <p class="mb-4">Websaya.xyz menyediakan servis pembinaan website khas untuk:</p>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 pl-4 list-disc marker:text-brand-red">
+                                <li>Freelancer dan consultant.</li>
+                                <li>SME dan syarikat tempatan.</li>
+                                <li>Human Resource Recruiter, Doktor, Peguam, Akauntan (expertise).</li>
+                                <li>Ejen Hartanah, Insurans, Servis Rumah (Coway, Cuckoo, etc).</li>
+                                <li>Coach, trainer dan mentor.</li>
+                                <li>Restoran, kafe dan kedai makan.</li>
+                                <li>Kontraktor dan servis tempatan.</li>
+                                <li>Startup dan personal brand.</li>
+                                <li>NGO dan organisasi.</li>
+                            </ul>
+                            <p class="mt-4 text-xs text-slate-500 italic">Ciri, fungsi, dan Bonus yang diterima adalah tertakluk kepada pakej yang dipilih. Sebarang permintaan tambahan di luar skop pakej akan dikenakan caj tambahan.</p>
+                        </div>
+
+                        <!-- 2. Maklumat Yang Perlu Disediakan -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">2</span>
+                                Maklumat Yang Perlu Disediakan
+                            </h3>
+                            <p class="mb-4">Untuk memulakan projek, pelanggan perlu menyediakan maklumat berikut:</p>
+                            <ol class="space-y-2 pl-4 list-decimal marker:text-brand-red font-medium text-slate-700">
+                                <li>Nama Penuh Asal seperti dalam IC <span class="text-xs text-slate-500">(untuk pengesahan pembayaran)</span></li>
+                                <li>Nama Bisnes / Servis / Syarikat <span class="text-xs text-slate-500 italic">(Cth: Homestay Kami Paling Viral)</span></li>
+                                <li>Jenis Bisnes / Servis / Syarikat <span class="text-xs text-slate-500 italic">(Cth: Makanan, Fesyen, Servis)</span></li>
+                                <li>Penerangan Ringkas Bisnes</li>
+                                <li>Senarai Produk/Servis <span class="text-xs text-slate-500 italic">(Cth: Roti, Kek, Pastri)</span></li>
+                                <li>Pakej Website</li>
+                                <li>Nombor WhatsApp Support Bisnes Tuan Puan</li>
+                                <li>Link Media Sosial <span class="text-xs text-slate-500">(Jika ada)</span></li>
+                                <li>Gambar <span class="text-xs text-slate-500">(Jika ada – boleh hantar di WhatsApp untuk preview di website)</span></li>
+                            </ol>
+                            <div class="mt-4 p-4 bg-amber-50 rounded-lg border border-brand-gold/20 text-xs sm:text-sm text-amber-800">
+                                <strong class="text-brand-gold font-bold">INFO TAMBAHAN:</strong> MAKLUMAT BERKAITAN DAN LAIN-LAIN AKAN DIMINTA DI WHATSAPP MENGIKUT JENIS BISNES PELANGGAN SEBAGAI CONTOH Freelancer dan consultant, SME dan syarikat tempatan dan sebagainya.
+                            </div>
+                            <p class="mt-3 text-xs text-brand-red font-semibold">⚠️ Kelewatan menghantar maklumat akan menyebabkan kelewatan dalam proses pembangunan website.</p>
+                        </div>
+
+                        <!-- 3. Tempoh Siap Projek -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">3</span>
+                                Tempoh Siap Projek
+                            </h3>
+                            <p class="mb-4">Anggaran tempoh siap selepas semua maklumat lengkap diterima:</p>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <span class="font-bold text-brand-red min-w-[150px] shrink-0">Professional Package:</span>
+                                    <span>24 jam <span class="text-slate-500 italic">(biasanya kurang 12 jam)</span></span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="font-bold text-brand-red min-w-[150px] shrink-0">Premium Package:</span>
+                                    <span>24-48 jam. <span class="text-slate-500 italic">(biasanya 24 jam sebab menggunakan domain .com/.my sendiri untuk domain propagation & DNS Server)</span></span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="font-bold text-brand-red min-w-[150px] shrink-0">Full-Premium:</span>
+                                    <span>48-72 jam. <span class="text-slate-500 italic">Tempoh boleh mengambil masa sehingga 10 hari bekerja sekiranya berlaku kelewatan daripada pihak ketiga seperti proses kelulusan payment gateway antara Bank Account Bisnes pelanggan dengan pihak Bank.</span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Polisi Pembayaran -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">4</span>
+                                Polisi Pembayaran
+                            </h3>
+                            <p>Bayaran penuh perlu dibuat sebelum projek dimulakan. Semua bayaran adalah muktamad. <span class="font-bold text-brand-red">Bayaran yang telah dibuat tidak boleh dipulangkan (non-refundable).</span></p>
+                        </div>
+
+                        <!-- 5. Polisi Pembatalan -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">5</span>
+                                Polisi Pembatalan
+                            </h3>
+                            <p class="mb-2">Tiada pemulangan wang selepas kerja dimulakan.</p>
+                            <p>Jika pelanggan membatalkan projek selepas setup domain, hosting, atau konfigurasi teknikal dilakukan, bayaran tetap tidak akan dipulangkan.</p>
+                        </div>
+
+                        <!-- 6. Domain dan Hosting -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">6</span>
+                                Domain dan Hosting
+                            </h3>
+                            <p class="mb-3">Domain dan Hosting Percuma diberikan untuk tahun pertama mengikut pakej yang dipilih. Renewal domain dan hosting selepas tamat tempoh pertama adalah tanggungjawab pelanggan.</p>
+                            <p class="text-xs sm:text-sm text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                                Kadar renewal tertakluk kepada harga semasa penyedia domain dan hosting. Setakat Mei, 2026 Harga Domain .com & .my diantara <span class="font-bold text-brand-red">RM60 - RM80 Setahun</span>.
+                            </p>
+                        </div>
+
+                        <!-- 7. Pemilikan Website & Branding -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">7</span>
+                                Pemilikan Website & Branding
+                            </h3>
+                            <p class="mb-3">Selepas projek siap dan bayaran diterima sepenuhnya:</p>
+                            <ul class="list-disc pl-4 space-y-1 mb-3">
+                                <li>Pelanggan adalah pemilik penuh website.</li>
+                                <li>Domain .com/.my adalah milik pelanggan.</li>
+                                <li>Secara default "Built by Websaya.xyz" akan berada di bahagian footer website pelanggan. Jika pelanggan ingin buang "Built by Websaya.xyz", bayaran <span class="font-bold text-brand-red">RM50</span> dikenakan.</li>
+                            </ul>
+                            <p class="text-xs text-slate-500 italic">Akses penuh website akan diberikan kepada pelanggan atas permintaan.</p>
+                        </div>
+
+                        <!-- 8. Polisi Revision -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">8</span>
+                                Polisi Revision
+                            </h3>
+                            <div class="space-y-3 mb-4">
+                                <div>
+                                    <strong class="text-brand-navy block">Professional Package:</strong>
+                                    <span class="text-sm">5 kali revision kecil (Teks, images, Logo, Maklumat Bisnes) & Support Teknikal 30 hari.</span>
+                                </div>
+                                <div>
+                                    <strong class="text-brand-navy block">Premium Package:</strong>
+                                    <span class="text-sm">5 kali revision kecil (Teks, images, Logo, Maklumat Bisnes) & Support Teknikal 30 hari.</span>
+                                </div>
+                                <div>
+                                    <strong class="text-brand-red block">Full-Premium Package:</strong>
+                                    <span class="text-sm font-semibold">Unlimited revision (Teks, Images, Logo, Maklumat Bisnes, Calendar Booking, Payment Gateway, Email Automation) & Support Teknikal 30 hari.</span>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 border-t border-slate-100 pt-4 text-xs sm:text-sm">
+                                <div>
+                                    <h5 class="font-bold text-emerald-700 mb-2">Revision Kecil Merangkumi:</h5>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li>Tukar teks.</li>
+                                        <li>Tukar gambar.</li>
+                                        <li>Kemaskini harga.</li>
+                                        <li>Ubah maklumat hubungan.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-brand-red mb-2">Revision Yang Tidak Termasuk (Caj tambahan dikenakan):</h5>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li>Tukar keseluruhan design.</li>
+                                        <li>Tambah fungsi baharu.</li>
+                                        <li>Ubah struktur website secara besar-besaran.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 9. Tempoh Support Percuma -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">9</span>
+                                Tempoh Support Percuma
+                            </h3>
+                            <p class="mb-3">Setiap pakej disertakan dengan sokongan teknikal <span class="font-semibold text-emerald-600">PERCUMA selama 30 hari</span> bermula dari tarikh website diserahkan.</p>
+                            <p class="text-xs sm:text-sm font-semibold text-brand-navy mb-2">Support merangkumi:</p>
+                            <ul class="list-disc pl-4 text-xs sm:text-sm text-slate-600 space-y-1">
+                                <li>Pembetulan isu teknikal.</li>
+                                <li>Bantuan penggunaan website (khas untuk pakej full-premium sahaja).</li>
+                                <li>Kemaskini kecil mengikut skop pakej.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 10. Maintenance Plan (Optional) -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">10</span>
+                                Maintenance Plan (Pilihan)
+                            </h3>
+                            <p class="mb-4">Selepas tempoh support tamat, pelanggan boleh melanggan Maintenance Plan berikut:</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3 text-center text-sm font-semibold">
+                                <div class="p-3 bg-slate-50 border border-slate-100 rounded-lg">
+                                    <p class="text-slate-500">Professional</p>
+                                    <p class="text-brand-red text-base">RM50/bulan</p>
+                                </div>
+                                <div class="p-3 bg-slate-50 border border-slate-100 rounded-lg">
+                                    <p class="text-slate-500">Premium</p>
+                                    <p class="text-brand-red text-base">RM80/bulan</p>
+                                end</div>
+                                <div class="p-3 bg-slate-50 border border-slate-100 rounded-lg">
+                                    <p class="text-slate-500">Full-Premium</p>
+                                    <p class="text-brand-red text-base">RM200/bulan</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-500 italic">Maintenance Plan merangkumi: Update kecil, Troubleshooting, Bantuan teknikal berterusan.</p>
+                        </div>
+
+                        <!-- 11. Artikel SEO -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">11</span>
+                                Artikel SEO
+                            </h3>
+                            <ul class="list-disc pl-4 space-y-2 text-sm sm:text-base">
+                                <li>Artikel SEO dihasilkan menggunakan gabungan teknologi AI dan semakan manual.</li>
+                                <li>Pelanggan digalakkan menyemak kandungan artikel sebelum diterbitkan.</li>
+                                <li>Ranking di Google tidak dijamin kerana bergantung kepada pelbagai faktor luar kawalan.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 12. SEO dan Prestasi Website -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">12</span>
+                                SEO dan Prestasi Website
+                            </h3>
+                            <p class="mb-3">Websaya.xyz tidak menjamin:</p>
+                            <ul class="list-disc pl-4 text-xs sm:text-sm text-slate-600 space-y-1 mb-3">
+                                <li>Website berada di kedudukan tertentu di Google.</li>
+                                <li>Jumlah trafik tertentu.</li>
+                                <li>Jumlah tempahan tertentu.</li>
+                            </ul>
+                            <p class="text-xs text-slate-500 italic">Prestasi sebenar bergantung kepada persaingan, lokasi, harga, reputasi, dan strategi pemasaran pelanggan.</p>
+                        </div>
+
+                        <!-- 13. Payment Gateway untuk Pakej RM999 dan Integrasi Pihak Ketiga -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">13</span>
+                                Payment Gateway & Pihak Ketiga
+                            </h3>
+                            <p>Integrasi payment gateway tertakluk kepada kelulusan akaun pelanggan oleh penyedia pihak ketiga. Sebarang caj daripada pihak ketiga ditanggung sepenuhnya oleh pelanggan. Websaya.xyz tidak bertanggungjawab terhadap kelewatan atau penolakan permohonan oleh pihak ketiga.</p>
+                        </div>
+
+                        <!-- 14. Booking System -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">14</span>
+                                Booking System
+                            </h3>
+                            <p>Fungsi booking system dibina berdasarkan ciri yang tersedia pada platform yang digunakan oleh pihak ketiga. Sebarang fungsi tambahan atau penyesuaian khas mungkin dikenakan caj tambahan.</p>
+                        </div>
+
+                        <!-- 15. Jaminan Servis -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">15</span>
+                                Jaminan Servis
+                            </h3>
+                            <p class="mb-2">Websaya.xyz memberi komitmen bahawa:</p>
+                            <ul class="list-disc pl-4 space-y-1 text-sm sm:text-base text-slate-700">
+                                <li>Website akan diuji sepenuhnya sebelum diserahkan.</li>
+                                <li>Semua fungsi yang dipersetujui akan dipastikan beroperasi dengan baik.</li>
+                                <li>Sokongan teknikal percuma disediakan sepanjang tempoh support.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 16. Hak Cipta Kandungan -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">16</span>
+                                Hak Cipta Kandungan
+                            </h3>
+                            <p>Pelanggan bertanggungjawab memastikan semua gambar, logo, dan kandungan yang diberikan untuk pembangunan Website adalah milik pelanggan atau digunakan dengan kebenaran sah. Websaya.xyz tidak bertanggungjawab terhadap sebarang tuntutan hak cipta.</p>
+                        </div>
+
+                        <!-- 17. Projek Tidak Aktif -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">17</span>
+                                Projek Tidak Aktif
+                            </h3>
+                            <p class="mb-3">Jika pelanggan tidak memberikan maklum balas atau bahan diperlukan dalam tempoh 24 Jam selepas bayaran dibuat, projek akan dianggap tertangguh dan akan diletakkan ke que belakang.</p>
+                            <p class="text-xs text-brand-red font-semibold bg-red-50 p-2.5 rounded-lg border border-red-100">⚠️ Projek yang tidak aktif melebihi 30 hari boleh ditutup. Penyambungan semula projek akan dikenakan caj tambahan mengikut pakej.</p>
+                        </div>
+
+                        <!-- 18. Hak Menolak Projek -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">18</span>
+                                Hak Menolak Projek
+                            </h3>
+                            <p class="mb-2">Websaya.xyz berhak menolak atau membatalkan projek sekiranya:</p>
+                            <ul class="list-disc pl-4 space-y-1 text-xs sm:text-sm text-slate-600">
+                                <li>Maklumat yang diberikan tidak lengkap.</li>
+                                <li>Kandungan melanggar undang-undang.</li>
+                                <li>Pelanggan gagal memberikan kerjasama yang sewajarnya.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 19. Perubahan Harga -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="font-heading font-bold text-lg text-brand-navy mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm mr-3">19</span>
+                                Perubahan Harga
+                            </h3>
+                            <p>Harga pakej dan Maintenance Plan boleh berubah pada bila-bila masa tanpa notis awal. Harga yang telah dibayar hanya terpakai untuk projek semasa.</p>
+                        </div>
+
+                        <!-- 20. Persetujuan Pelanggan -->
+                        <div class="bg-brand-navy text-white p-6 sm:p-8 rounded-xl border border-slate-700 shadow-lg">
+                            <h3 class="font-heading font-bold text-lg text-white mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center font-bold text-sm mr-3">20</span>
+                                Persetujuan Pelanggan
+                            </h3>
+                            <p class="mb-3">Dengan membuat pembayaran, pelanggan dianggap:</p>
+                            <ul class="list-decimal pl-4 space-y-2 text-sm text-slate-300">
+                                <li>Telah membaca dan memahami Terms & Conditions ini.</li>
+                                <li>Bersetuju dengan skop servis yang ditawarkan.</li>
+                                <li>Bersetuju bahawa semua bayaran adalah non-refundable.</li>
+                                <li>Bersetuju dengan polisi support, revision, dan renewal.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY SUMMARY SECTION (LIGHT BACKGROUND) -->
+    <section id="ringkasan" class="py-16 bg-brand-light">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-brand-navy mb-3">
+                    ✅ Ringkasan Penting Sebelum Membuat Bayaran
+                </h2>
+                <p class="text-slate-600 max-w-xl mx-auto">Sila baca ringkasan terma utama ini dengan teliti sebelum anda melunaskan sebarang pembayaran perkhidmatan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <!-- Point 1 -->
+                <div class="flex items-start p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <span class="p-2 bg-red-50 text-brand-red rounded-lg mr-4 shrink-0">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </span>
+                    <div>
+                        <h4 class="font-heading font-bold text-slate-900 mb-1">Bayaran Penuh Diperlukan</h4>
+                        <p class="text-sm text-slate-600 font-medium">Bayaran penuh diperlukan sebelum projek dimulakan.</p>
+                    </div>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="flex items-start p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <span class="p-2 bg-red-50 text-brand-red rounded-lg mr-4 shrink-0">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </span>
+                    <div>
+                        <h4 class="font-heading font-bold text-slate-900 mb-1">Polisi Non-Refundable</h4>
+                        <p class="text-sm text-slate-600 font-medium">Semua bayaran adalah non-refundable (tidak boleh dipulangkan).</p>
+                    </div>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="flex items-start p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <span class="p-2 bg-red-50 text-brand-red rounded-lg mr-4 shrink-0">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                    </span>
+                    <div>
+                        <h4 class="font-heading font-bold text-slate-900 mb-1">Domain Percuma Tahun Pertama</h4>
+                        <p class="text-sm text-slate-600 font-medium">Domain untuk Pakej Premium & Full-Premium adalah Percuma untuk tahun pertama sahaja.</p>
+                    </div>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="flex items-start p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <span class="p-2 bg-red-50 text-brand-red rounded-lg mr-4 shrink-0">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </span>
+                    <div>
+                        <h4 class="font-heading font-bold text-slate-900 mb-1">Sokongan Percuma 30 Hari</h4>
+                        <p class="text-sm text-slate-600 font-medium">Support teknikal Percuma selama 30 hari untuk semua pakej.</p>
+                    </div>
+                </div>
+
+                <!-- Point 5 -->
+                <div class="flex items-start p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <span class="p-2 bg-red-50 text-brand-red rounded-lg mr-4 shrink-0">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                    </span>
+                    <div>
+                        <h4 class="font-heading font-bold text-slate-900 mb-1">Tiada Jaminan Hasil Ranking</h4>
+                        <p class="text-sm text-slate-600 font-medium">Ranking Google dan jumlah tempahan tidak dijamin.</p>
+                    </div>
+                </div>
+
+                <!-- Point 6 -->
+                <div class="flex items-start p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <span class="p-2 bg-red-50 text-brand-red rounded-lg mr-4 shrink-0">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </span>
+                    <div>
+                        <h4 class="font-heading font-bold text-slate-900 mb-1">Tanggungjawab Renewal</h4>
+                        <p class="text-sm text-slate-600 font-medium">Renewal Domain pakej Premium & Full-Premium selepas tahun pertama ditanggung oleh pelanggan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-xs sm:text-sm text-slate-500 italic mb-12">
+                *Sebarang permintaan untuk fungsi tersuai di luar modul pakej sedia ada akan dikenakan caj tambahan yang dipersetujui.
+            </p>
+
+            <!-- BCL.MY PAYMENT GATEWAY EMBED CONTAINER -->
+            <div class="max-w-xl mx-auto p-6 bg-white rounded-2xl border border-slate-200 shadow-premium">
+                <!-- Payment Gateway Form Hook -->
+                <div id="bcl-payment-form" data-url="https://websaya.bcl.my/embed/form/payment"></div>
+                <script src="https://bcl.my/js/bc-encrypted-payment-embed.js"></script>
+                
+                <!-- Security Badges & Details -->
+                <div class="mt-6 text-center border-t border-slate-100 pt-6">
+                    <div class="flex justify-center items-center space-x-2 text-emerald-600 font-bold text-base sm:text-lg mb-2">
+                        <span>🛡️ Pembayaran Terjamin Selamat 🔒</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                        Maklumat anda disulitkan (encrypted) menggunakan teknologi sekuriti bertaraf bank. Kami tidak menyimpan maklumat kad kredit atau debit anda. ✅
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION (DARK) -->
+    <footer class="bg-brand-navy text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs sm:text-sm text-slate-500">
+            <p>Hak Cipta Terpelihara © 2026 Websaya.xyz. Dibina di Malaysia by Asyraf Asri Empire 202303160700 (003505484-H)</p>
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT LOGIC AND INTERACTIVITY -->
+    <script>
+        // T&C Expand/Collapse Controller
+        let tcExpanded = false;
+        function toggleTC() {
+            const content = document.getElementById('tc-content');
+            const overlay = document.getElementById('fade-overlay');
+            const btn = document.getElementById('toggle-tc-btn');
+
+            if (!tcExpanded) {
+                // Expand
+                content.classList.add('expanded');
+                overlay.style.opacity = '0';
+                btn.innerHTML = `
+                    <span>COLLAPSE TERMA & SYARAT</span>
+                    <svg id="chevron-icon" class="h-5 w-5 transform rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                    </svg>
+                `;
+                tcExpanded = true;
+                
+                // Add minor timeout to hide overlay entirely from click stream
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                }, 500);
+            } else {
+                // Collapse
+                content.classList.remove('expanded');
+                overlay.classList.remove('hidden');
+                // Allow CSS transition then restore opacity
+                setTimeout(() => {
+                    overlay.style.opacity = '1';
+                }, 50);
+                
+                btn.innerHTML = `
+                    <span>SAMBUNG BACA T&C PENUH</span>
+                    <svg id="chevron-icon" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                    </svg>
+                `;
+                tcExpanded = false;
+
+                // Scroll smoothly back to top of section so user is not lost
+                document.getElementById('terma-syarat').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
