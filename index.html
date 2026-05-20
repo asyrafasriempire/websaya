@@ -44,7 +44,7 @@
                     },
                     boxShadow: {
                         'premium': '0 10px 40px -10px rgba(15, 23, 42, 0.1)',
-                        'glow': '0 0 20px rgba(220, 38, 38, 0.5)',
+                        'glow': '0 0 20px rgba(220, 38, 38, 0.3)',
                     }
                 }
             }
@@ -93,7 +93,7 @@
 </head>
 <body class="font-sans text-slate-700 bg-slate-50 antialiased selection:bg-brand-red selection:text-white">
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center gap-2">
@@ -102,18 +102,38 @@
                     </div>
                     <span class="font-heading font-bold text-2xl text-brand-navy tracking-tight">Websaya<span class="text-brand-red">.xyz</span></span>
                 </div>
+                
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#masalah" class="text-sm font-medium hover:text-brand-red transition">Masalah</a>
-                    <a href="#solusi" class="text-sm font-medium hover:text-brand-red transition">Solusi</a>
-                    <a href="#pakej" class="text-sm font-medium hover:text-brand-red transition">Pakej</a>
-                    <a href="#faq" class="text-sm font-medium hover:text-brand-red transition">FAQ</a>
+                    <a href="#masalah" class="text-sm font-medium text-slate-600 hover:text-brand-red transition">Masalah</a>
+                    <a href="#solusi" class="text-sm font-medium text-slate-600 hover:text-brand-red transition">Solusi</a>
+                    <a href="#pakej" class="text-sm font-medium text-slate-600 hover:text-brand-red transition">Pakej</a>
+                    <a href="#faq" class="text-sm font-medium text-slate-600 hover:text-brand-red transition">FAQ</a>
                 </div>
-                <div>
-                    <a href="#pakej" class="hidden md:inline-flex bg-brand-red text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-brand-redhover transition transform hover:-translate-y-0.5 shadow-lg shadow-red-500/30">
+                
+                <div class="hidden md:block">
+                    <a href="#pakej" class="inline-flex bg-brand-red text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-brand-redhover transition transform hover:-translate-y-0.5 shadow-lg shadow-red-500/20">
                         Tempah Sekarang
                     </a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden flex items-center text-slate-700 hover:text-brand-red focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition">
+                    <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
             </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden absolute w-full bg-white border-b border-slate-200 shadow-xl px-4 py-6 space-y-4">
+            <a href="#masalah" class="block text-base font-semibold text-slate-800 hover:text-brand-red transition">Masalah</a>
+            <a href="#solusi" class="block text-base font-semibold text-slate-800 hover:text-brand-red transition">Solusi</a>
+            <a href="#pakej" class="block text-base font-semibold text-slate-800 hover:text-brand-red transition">Pakej</a>
+            <a href="#faq" class="block text-base font-semibold text-slate-800 hover:text-brand-red transition">FAQ</a>
+            <a href="#pakej" class="block w-full text-center bg-brand-red text-white py-3 rounded-xl font-bold hover:bg-brand-redhover transition shadow-md shadow-red-500/10">
+                Tempah Sekarang
+            </a>
         </div>
     </nav>
 
@@ -127,12 +147,12 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                 
                 <!-- Live View Counter -->
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-8 backdrop-blur-sm animate-pulse">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-8 backdrop-blur-sm animate-pulse">
                     <span class="relative flex h-3 w-3">
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                       <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-red"></span>
                     </span>
-                    <span class="text-brand-light">🔥 <span id="liveCounter" class="font-bold text-white">124</span> orang usahawan sedang melihat halaman ini</span>
+                    <span class="text-brand-light">🔥 <span id="liveCounter" class="font-bold text-white">124</span> usahawan sedang melihat halaman ini</span>
                 </div>
 
                 <p class="text-brand-gold font-semibold uppercase tracking-wider text-sm mb-4">Servis Premium Untuk Founder & Profesional</p>
@@ -181,7 +201,7 @@
                 <p class="text-2xl md:text-3xl font-medium italic text-slate-700 leading-relaxed">
                     "Bayangkan bangun tidur pagi ini, buka phone, dan nampak berpuluh 'leads' baru masuk ke WhatsApp anda secara automatik dari Google, tanpa anda perlu buat apa-apa marketing manual pun."
                 </p>
-                <p class="mt-6 text-lg text-indigo-900/70 font-medium">Benda ni bukan fantasi, inilah realiti bila bisnes anda ada sistem website yang betul.</p>
+                <p class="mt-6 text-lg text-indigo-950/70 font-medium">Benda ni bukan fantasi, inilah realiti bila bisnes anda ada sistem website yang betul.</p>
             </div>
         </section>
 
@@ -206,7 +226,7 @@
                         <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-100 text-brand-red mb-2">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
                         </div>
-                        <h4 class="text-2xl font-heading font-bold text-brand-navy">Bisnes Nampak "Scam" Tanpa Aset Digital Sah</h4>
+                        <h4 class="text-2xl font-heading font-bold text-brand-navy">Bisnes Nampak "Scam" Tanoa Aset Digital Sah</h4>
                         <p class="text-lg text-slate-600">Pelanggan zaman sekarang bijak. Sebelum mereka bank-in duit atau guna servis anda, mereka akan 'Google' dulu. Kalau jumpa Facebook page kosong atau IG yang tak update, mereka lari ke pesaing. Ketiadaan website profesional merosakkan "Trust" serta-merta.</p>
                         <ul class="space-y-3 mt-4 text-slate-600">
                             <li class="flex items-start gap-3">
@@ -234,7 +254,7 @@
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
                         <h4 class="text-2xl font-heading font-bold text-brand-navy">Dah Ada Website, Tapi Loading Siput & Ketinggalan Zaman</h4>
-                        <p class="text-lg text-slate-600">Mungkin anda pernah upah orang buat website sebelum ni. Tapi masalahnya, loading ambil masa 10 saat. Design pula nampak macam tahun 2010. Pelawat masuk, sakit mata, terus tekan butang "X". Duit lebur, hasil tiada.</p>
+                        <p class="text-lg text-slate-600">Mungkin anda pernah upah orang buat website sebelum ni. Tapi masalahnya, loading ambil masa 10 saat. Design pula nampak macam tahun 2010. Pelawat masuk, sakit mata, terus tekan buatng "X". Duit lebur, hasil tiada.</p>
                         <ul class="space-y-3 mt-4 text-slate-600">
                             <li class="flex items-start gap-3">
                                 <svg class="w-6 h-6 text-brand-red shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -260,7 +280,7 @@
                 <!-- 5. BIG PROMISE -->
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto mb-20 shadow-2xl">
                     <p class="text-xl md:text-2xl font-medium leading-relaxed">
-                        "Dengan <span class="font-bold text-brand-gold">Websaya.xyz</span>, anda boleh memiliki aset digital premium yang <span class="text-brand-red font-bold bg-white/90 px-2 py-1 rounded">menjana prospek berkualiti</span> setiap hari, <span class="underline decoration-brand-red decoration-4">tanpa perlu</span> pening kepala pasal kod teknikal atau tunggu berbulan-bulan untuk siap."
+                        "Dengan <span class="font-bold text-brand-gold">Websaya.xyz</span>, anda boleh memiliki aset digital premium yang <span class="text-brand-red font-bold bg-white/95 px-2 py-1 rounded">menjana prospek berkualiti</span> setiap hari, <span class="underline decoration-brand-red decoration-4">tanpa perlu</span> pening kepala pasal kod teknikal atau tunggu berbulan-bulan untuk siap."
                     </p>
                 </div>
 
@@ -385,73 +405,287 @@
         <section id="portfolio" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl font-heading font-bold text-brand-navy mb-10">Portfolio / Hasil Kerja Kami</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Placeholder Images mimicking portfolio -->
-                    <a href="javascript:void(0)" class="block overflow-hidden rounded-xl border border-slate-200 shadow-md hover:shadow-xl transition group">
-                        <img src="https://placehold.co/600x400/0f172a/ffffff?text=Portfolio+Klinik+Gigi" alt="Portfolio 1" class="w-full h-auto transform group-hover:scale-105 transition duration-500">
-                    </a>
-                    <a href="javascript:void(0)" class="block overflow-hidden rounded-xl border border-slate-200 shadow-md hover:shadow-xl transition group">
-                        <img src="https://placehold.co/600x400/dc2626/ffffff?text=Portfolio+Ejen+Hartanah" alt="Portfolio 2" class="w-full h-auto transform group-hover:scale-105 transition duration-500">
-                    </a>
-                    <a href="javascript:void(0)" class="block overflow-hidden rounded-xl border border-slate-200 shadow-md hover:shadow-xl transition group">
-                        <img src="https://placehold.co/600x400/f59e0b/ffffff?text=Portfolio+Syarikat+Kontraktor" alt="Portfolio 3" class="w-full h-auto transform group-hover:scale-105 transition duration-500">
+                <div class="flex justify-center">
+                    <a href="https://websaya.xyz/portfolio/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-brand-red hover:bg-brand-redhover text-white text-lg md:text-xl font-bold py-4 md:py-5 px-8 md:px-12 rounded-full transition-all duration-300 transform hover:scale-105 shadow-glow group gap-3 font-heading tracking-wide">
+                        LIHAT PORTFOLIO KAMI
+                        <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- 7. BUKTI / TESTIMONI -->
-        <section class="py-20 bg-slate-100">
+        <section class="py-20 bg-slate-100 overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
+                <div class="text-center mb-16">
                     <h2 class="text-3xl font-heading font-bold text-brand-navy">Apa Kata Klien Kami?</h2>
-                    <p class="text-slate-600 mt-2">Bukti nyata dari usahawan seperti anda.</p>
+                    <p class="text-slate-600 mt-2">Bukti nyata dari usahawan seperti Tuan Puan.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Testimonial Placeholders (WhatsApp Screenshots style) -->
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
-                            <div>
-                                <p class="font-bold text-sm">Klien Servis Penghawa Dingin</p>
-                                <p class="text-xs text-slate-500">WhatsApp Feedback</p>
-                            </div>
-                        </div>
-                        <img src="https://placehold.co/400x300/e2e8f0/475569?text=Screenshot+Whatsapp+1" alt="Testimoni 1" class="w-full rounded-lg">
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
                     
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
-                            <div>
-                                <p class="font-bold text-sm">Konsultan Kewangan</p>
-                                <p class="text-xs text-slate-500">WhatsApp Feedback</p>
+                    <!-- KOTAK TESTIMONI WHATSAPP 1: SERVIS PENGHAWA DINGIN -->
+                    <div class="bg-[#efeae2] rounded-2xl shadow-premium border border-slate-200 overflow-hidden flex flex-col h-full font-sans transform hover:scale-[1.02] transition-transform duration-300">
+                        <!-- WhatsApp Header -->
+                        <div class="bg-[#075e54] text-white px-4 py-3.5 flex items-center justify-between shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                                <div class="w-9 h-9 bg-teal-800 rounded-full flex items-center justify-center font-bold text-white uppercase text-sm border border-white/20 select-none">
+                                    SD
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm tracking-wide">Klien Servis Aircond</h4>
+                                    <p class="text-[10px] text-emerald-200 font-medium">Online</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 text-white/90">
+                                <svg class="w-5 h-5 cursor-pointer hover:text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+                                <svg class="w-4 h-4 cursor-pointer hover:text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
                             </div>
                         </div>
-                        <img src="https://placehold.co/400x300/e2e8f0/475569?text=Screenshot+Whatsapp+2" alt="Testimoni 2" class="w-full rounded-lg">
+                        
+                        <!-- Chat Area -->
+                        <div class="p-4 space-y-4 flex-1 flex flex-col justify-between">
+                            <div class="space-y-4">
+                                <!-- 5 Star Rating Bold & Menonjol -->
+                                <div class="bg-white/95 inline-flex items-center gap-2 px-3 py-2 rounded-xl border-2 border-amber-400 shadow-md justify-center w-full mb-2">
+                                    <span class="text-amber-500 font-black text-2xl tracking-wider drop-shadow-sm">⭐️⭐️⭐️⭐️⭐️</span>
+                                    <span class="text-xs font-black text-slate-800 bg-amber-100 px-2 py-0.5 rounded">5.0</span>
+                                </div>
+                                
+                                <!-- Customer bubble (Left) -->
+                                <div class="relative max-w-[90%] bg-white text-slate-800 p-3.5 rounded-2xl rounded-tl-none shadow-sm border border-slate-100">
+                                    <p class="text-sm leading-relaxed font-normal whitespace-pre-line">
+                                        Asyraf😍 servis bro memang Terbaik, sy amik pakej rm299 sebab bajet 🥺 tapi presentation website sy yg bro bina memang premium 😭 skrg ni Alhamdulillah xputus2 client aircond wasap sy lepas ada website sndri 🤲🏻
+                                    </p>
+                                    <div class="text-right mt-1.5 text-[9px] text-slate-400 font-medium">1:50 PM</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Reply bubble (Right) -->
+                            <div class="relative max-w-[90%] bg-[#d9fdd3] text-slate-800 p-3.5 rounded-2xl rounded-tr-none shadow-sm border border-emerald-100 self-end ml-auto mt-4">
+                                <p class="text-sm leading-relaxed font-normal">
+                                    Alhamdulillah, bestnyaaa dapat bantu bro! Terima Kasih sebab percaya my humble servis..
+                                </p>
+                                <div class="text-right mt-1.5 text-[9px] text-slate-400 font-medium flex items-center justify-end gap-1">
+                                    <span>1:52 PM</span>
+                                    <svg class="w-3.5 h-3.5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path><path d="M16 6l-7 11"></path></svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
-                            <div>
-                                <p class="font-bold text-sm">Syarikat Umrah & Haji</p>
-                                <p class="text-xs text-slate-500">WhatsApp Feedback</p>
+                    <!-- KOTAK TESTIMONI WHATSAPP 2: SERVIS FINANCIAL CONSULTANT -->
+                    <div class="bg-[#efeae2] rounded-2xl shadow-premium border border-slate-200 overflow-hidden flex flex-col h-full font-sans transform hover:scale-[1.02] transition-transform duration-300">
+                        <!-- WhatsApp Header -->
+                        <div class="bg-[#075e54] text-white px-4 py-3.5 flex items-center justify-between shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                                <div class="w-9 h-9 bg-teal-800 rounded-full flex items-center justify-center font-bold text-white uppercase text-sm border border-white/20 select-none">
+                                    FC
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm tracking-wide">Financial Consultant</h4>
+                                    <p class="text-[10px] text-emerald-200 font-medium">Online</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 text-white/90">
+                                <svg class="w-5 h-5 cursor-pointer hover:text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+                                <svg class="w-4 h-4 cursor-pointer hover:text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
                             </div>
                         </div>
-                        <img src="https://placehold.co/400x300/e2e8f0/475569?text=Screenshot+Whatsapp+3" alt="Testimoni 3" class="w-full rounded-lg">
+                        
+                        <!-- Chat Area -->
+                        <div class="p-4 space-y-4 flex-1 flex flex-col justify-between">
+                            <div class="space-y-4">
+                                <!-- 5 Star Rating Bold & Menonjol -->
+                                <div class="bg-white/95 inline-flex items-center gap-2 px-3 py-2 rounded-xl border-2 border-amber-400 shadow-md justify-center w-full mb-2">
+                                    <span class="text-amber-500 font-black text-2xl tracking-wider drop-shadow-sm">⭐️⭐️⭐️⭐️⭐️</span>
+                                    <span class="text-xs font-black text-slate-800 bg-amber-100 px-2 py-0.5 rounded">5.0</span>
+                                </div>
+                                
+                                <!-- Customer bubble (Left) -->
+                                <div class="relative max-w-[90%] bg-white text-slate-800 p-3.5 rounded-2xl rounded-tl-none shadow-sm border border-slate-100">
+                                    <p class="text-sm leading-relaxed font-normal whitespace-pre-line">
+                                        jujur cakap skrg ni susah nak dapat client untuk consult their finance 🥺 tapi sejak ada Website dgn domain sendiri, fuhhhh all my client trust me to the moon 😍 + i love your servive you can deliver to me for live website less than 12hrs, such a great cooperation Asyraf⭐️⭐️⭐️⭐️⭐️ i will recommend ur service to all my partners
+                                    </p>
+                                    <div class="text-right mt-1.5 text-[9px] text-slate-400 font-medium">1:57 PM</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Reply bubble (Right) -->
+                            <div class="relative max-w-[90%] bg-[#d9fdd3] text-slate-800 p-3.5 rounded-2xl rounded-tr-none shadow-sm border border-emerald-100 self-end ml-auto mt-4">
+                                <p class="text-sm leading-relaxed font-normal">
+                                    Good to hear your compliments Puan🥰 and Thanks sudi recommend to others
+                                </p>
+                                <div class="text-right mt-1.5 text-[9px] text-slate-400 font-medium flex items-center justify-end gap-1">
+                                    <span>2:00 PM</span>
+                                    <svg class="w-3.5 h-3.5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path><path d="M16 6l-7 11"></path></svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <img src="https://placehold.co/400x300/e2e8f0/475569?text=Screenshot+Whatsapp+4" alt="Testimoni 4" class="w-full rounded-lg">
+
+                    <!-- KOTAK TESTIMONI WHATSAPP 3: SERVIS HOMESTAY -->
+                    <div class="bg-[#efeae2] rounded-2xl shadow-premium border border-slate-200 overflow-hidden flex flex-col h-full font-sans transform hover:scale-[1.02] transition-transform duration-300">
+                        <!-- WhatsApp Header -->
+                        <div class="bg-[#075e54] text-white px-4 py-3.5 flex items-center justify-between shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                                <div class="w-9 h-9 bg-teal-800 rounded-full flex items-center justify-center font-bold text-white uppercase text-sm border border-white/20 select-none">
+                                    KH
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm tracking-wide">Klien Homestay</h4>
+                                    <p class="text-[10px] text-emerald-200 font-medium">Online</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 text-white/90">
+                                <svg class="w-5 h-5 cursor-pointer hover:text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+                                <svg class="w-4 h-4 cursor-pointer hover:text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
+                            </div>
+                        </div>
+                        
+                        <!-- Chat Area -->
+                        <div class="p-4 space-y-4 flex-1 flex flex-col justify-between">
+                            <div class="space-y-4">
+                                <!-- 5 Star Rating Bold & Menonjol -->
+                                <div class="bg-white/95 inline-flex items-center gap-2 px-3 py-2 rounded-xl border-2 border-amber-400 shadow-md justify-center w-full mb-2">
+                                    <span class="text-amber-500 font-black text-2xl tracking-wider drop-shadow-sm">⭐️⭐️⭐️⭐️⭐️</span>
+                                    <span class="text-xs font-black text-slate-800 bg-amber-100 px-2 py-0.5 rounded">5.0</span>
+                                </div>
+                                
+                                <!-- Customer bubble (Left) -->
+                                <div class="relative max-w-[90%] bg-white text-slate-800 p-3.5 rounded-2xl rounded-tl-none shadow-sm border border-slate-100">
+                                    <p class="text-sm leading-relaxed font-normal whitespace-pre-line">
+                                        betol ckp awk Asyraf.. socmed ni memang viral mcm tiktok, etc tapi bila customer nak booking akak pulak rasa penat nak layan kat wasap, lagi2 komisen Airbnb agoda saje dah 15% per customer adoii rugi besar akak.. dgn pakej 999 ni akak bukan je dpt bina personal branding Homestay akak ni tapi untung tu 100% masuk poket 😍😭 Terima Kasih Asyraf sudi tolong akak yer
+                                    </p>
+                                    <div class="text-right mt-1.5 text-[9px] text-slate-400 font-medium">2:14 PM</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Reply bubble (Right) -->
+                            <div class="relative max-w-[90%] bg-[#d9fdd3] text-slate-800 p-3.5 rounded-2xl rounded-tr-none shadow-sm border border-emerald-100 self-end ml-auto mt-4">
+                                <p class="text-sm leading-relaxed font-normal">
+                                    Wah dah untung 100% tu, 10% tu jangan lupa kak 😜 gurauu kak jangan amik ati
+                                </p>
+                                <div class="text-right mt-1.5 text-[9px] text-slate-400 font-medium flex items-center justify-end gap-1">
+                                    <span>2:15 PM</span>
+                                    <svg class="w-3.5 h-3.5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path><path d="M16 6l-7 11"></path></svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <img src="https://placehold.co/400x300/e2e8f0/475569?text=Screenshot+Whatsapp+5" alt="Testimoni 5" class="w-full rounded-lg">
+
+                    <!-- KOTAK TESTIMONI WHATSAPP 4: SERVIS LEGAL ADVICE -->
+                    <div class="bg-[#efeae2] rounded-2xl shadow-premium border border-slate-200 overflow-hidden flex flex-col h-full font-sans transform hover:scale-[1.02] transition-transform duration-300">
+                        <!-- WhatsApp Header -->
+                        <div class="bg-[#075e54] text-white px-4 py-3.5 flex items-center justify-between shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                                <div class="w-9 h-9 bg-teal-800 rounded-full flex items-center justify-center font-bold text-white uppercase text-sm border border-white/20 select-none">
+                                    SL
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm tracking-wide">Sara (Lawyer)</h4>
+                                    <p class="text-[10px] text-emerald-200 font-medium">Online</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 text-white/90">
+                                <svg class="w-5 h-5 cursor-pointer hover:text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+                                <svg class="w-4 h-4 cursor-pointer hover:text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
+                            </div>
+                        </div>
+                        
+                        <!-- Chat Area -->
+                        <div class="p-4 space-y-4 flex-1 flex flex-col justify-between">
+                            <div class="space-y-4">
+                                <!-- 5 Star Rating Bold & Menonjol -->
+                                <div class="bg-white/95 inline-flex items-center gap-2 px-3 py-2 rounded-xl border-2 border-amber-400 shadow-md justify-center w-full mb-2">
+                                    <span class="text-amber-500 font-black text-2xl tracking-wider drop-shadow-sm">⭐️⭐️⭐️⭐️⭐️</span>
+                                    <span class="text-xs font-black text-slate-800 bg-amber-100 px-2 py-0.5 rounded">5.0</span>
+                                </div>
+                                
+                                <!-- Customer bubble (Left) -->
+                                <div class="relative max-w-[90%] bg-white text-slate-800 p-3.5 rounded-2xl rounded-tl-none shadow-sm border border-slate-100">
+                                    <p class="text-sm leading-relaxed font-normal whitespace-pre-line">
+                                        Asyraf😍 pakej 399 nii tak sia sia i amik tau, betul2 bina my personal branding as Lawyer. betul cakap u TikTok saje xcukup nak bina personal branding.. now bersepah client dalam list needs my Legal advice. I will recommend ur website service to all my Lawyer colleagues ⭐️⭐️⭐️⭐️⭐️
+                                    </p>
+                                    <div class="text-right mt-1.5 text-[9px] text-slate-400 font-medium">2:22 PM</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Reply bubble (Right) -->
+                            <div class="relative max-w-[90%] bg-[#d9fdd3] text-slate-800 p-3.5 rounded-2xl rounded-tr-none shadow-sm border border-emerald-100 self-end ml-auto mt-4">
+                                <p class="text-sm leading-relaxed font-normal text-slate-800">
+                                    Alhamdulillah, Thanks Sara trust my service, at 1st i takut jugak nak deliver website service ni ke Lawyer tapi u make me feel like bff so Yes i made it to make ur personal branding more shines.
+                                </p>
+                                <div class="text-right mt-1.5 text-[9px] text-slate-400 font-medium flex items-center justify-end gap-1">
+                                    <span>2:23 PM</span>
+                                    <svg class="w-3.5 h-3.5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path><path d="M16 6l-7 11"></path></svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <img src="https://placehold.co/400x300/e2e8f0/475569?text=Screenshot+Whatsapp+6" alt="Testimoni 6" class="w-full rounded-lg">
+
+                    <!-- KOTAK TESTIMONI WHATSAPP 5: SERVIS UMRAH -->
+                    <div class="bg-[#efeae2] rounded-2xl shadow-premium border border-slate-200 overflow-hidden flex flex-col h-full font-sans transform hover:scale-[1.02] transition-transform duration-300 md:col-span-2 lg:col-span-1">
+                        <!-- WhatsApp Header -->
+                        <div class="bg-[#075e54] text-white px-4 py-3.5 flex items-center justify-between shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                                <div class="w-9 h-9 bg-teal-800 rounded-full flex items-center justify-center font-bold text-white uppercase text-sm border border-white/20 select-none">
+                                    US
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm tracking-wide">Syarikat Umrah (Ustaz)</h4>
+                                    <p class="text-[10px] text-emerald-200 font-medium">Online</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 text-white/90">
+                                <svg class="w-5 h-5 cursor-pointer hover:text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+                                <svg class="w-4 h-4 cursor-pointer hover:text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
+                            </div>
+                        </div>
+                        
+                        <!-- Chat Area -->
+                        <div class="p-4 space-y-4 flex-1 flex flex-col justify-between">
+                            <div class="space-y-4">
+                                <!-- 5 Star Rating Bold & Menonjol -->
+                                <div class="bg-white/95 inline-flex items-center gap-2 px-3 py-2 rounded-xl border-2 border-amber-400 shadow-md justify-center w-full mb-2">
+                                    <span class="text-amber-500 font-black text-2xl tracking-wider drop-shadow-sm">⭐️⭐️⭐️⭐️⭐️</span>
+                                    <span class="text-xs font-black text-slate-800 bg-amber-100 px-2 py-0.5 rounded">5.0</span>
+                                </div>
+                                
+                                <!-- Customer bubble (Left) -->
+                                <div class="relative max-w-[90%] bg-white text-slate-800 p-3.5 rounded-2xl rounded-tl-none shadow-sm border border-slate-100">
+                                    <p class="text-sm leading-relaxed font-normal whitespace-pre-line">
+                                        Saya masih ingat lagi masa mula2 nak amik pakej mana satu untuk Syarikat Umrah saya, Asyraf betol2 tunukkan apa bezanya pakej 399 vs 999. Finally saya amik 999 sbb saya tau saya tak boley nak commit masa nak layan customer sorang2.. Alhamdulillah dulu nak dapat client Umrah kemain susah lagi sbb takde website, dgn modal 999 saya dpat untung 10xganda 😭 Terima Kasih Asyraf...
+                                    </p>
+                                    <div class="text-right mt-1.5 text-[9px] text-slate-400 font-medium">2:07 PM</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Reply bubble (Right) -->
+                            <div class="relative max-w-[90%] bg-[#d9fdd3] text-slate-800 p-3.5 rounded-2xl rounded-tr-none shadow-sm border border-emerald-100 self-end ml-auto mt-4">
+                                <p class="text-sm leading-relaxed font-normal text-slate-800">
+                                    Ya Allah Ustaz, betul2 menjentik emosi sy ni, semoga website umrah Ustaz terus viral..
+                                </p>
+                                <div class="text-right mt-1.5 text-[9px] text-slate-400 font-medium flex items-center justify-end gap-1">
+                                    <span>2:09 PM</span>
+                                    <svg class="w-3.5 h-3.5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path><path d="M16 6l-7 11"></path></svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -492,7 +726,7 @@
                     <p class="text-slate-600 text-lg">Pelaburan sekali sahaja, manfaat berpanjangan. Telus, tiada yuran tersembunyi.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
                     
                     <!-- Professional Package -->
                     <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col hover:shadow-xl transition transform hover:-translate-y-1">
@@ -507,7 +741,7 @@
                             </div>
                             <p class="text-sm font-bold text-brand-red mt-3 bg-red-50 p-2 rounded">Sesuai untuk yang mahu website asas, profesional tapi mesra poket.</p>
                         </div>
-                        <div class="p-8 flex-1 bg-white">
+                        <div class="p-8 flex-1 bg-white flex flex-col justify-between">
                             <ul class="space-y-4 text-sm text-slate-600 mb-8">
                                 <li class="flex items-start gap-3"><svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Website Profesional termasuk Legal Pages (About Us, Contact, etc)</span></li>
                                 <li class="flex items-start gap-3"><svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Mobile friendly design.</span></li>
@@ -519,12 +753,12 @@
                                 <li class="flex items-start gap-3"><svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>5 kali revision (Teks, images) & Support Teknikal 30 hari.</span></li>
                                 <li class="flex items-start gap-3 font-bold text-brand-navy bg-slate-100 p-2 rounded"><svg class="w-5 h-5 text-brand-red shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Siap dalam 24 jam.</span></li>
                             </ul>
-                            <a href="https://wa.me/60123456789?text=Hai%20Websaya,%20saya%20berminat%20Pakej%20Professional%20RM299" target="_blank" class="block w-full py-4 px-6 text-center rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition">Pilih Pakej Ini</a>
+                            <a href="https://wa.me/601119712135?text=Hai%20Websaya,%20saya%20berminat%20Pakej%20Professional%20RM299" target="_blank" class="block w-full py-4 px-6 text-center rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition">Pilih Pakej Ini</a>
                         </div>
                     </div>
 
                     <!-- Premium Package (Highlighted) -->
-                    <div class="bg-white rounded-2xl shadow-2xl border-2 border-brand-red overflow-hidden flex flex-col transform scale-105 relative z-10">
+                    <div class="bg-white rounded-2xl shadow-2xl border-2 border-brand-red overflow-hidden flex flex-col transform md:scale-105 relative z-10">
                         <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-red-500 to-red-700"></div>
                         <div class="absolute top-4 right-[-35px] bg-brand-red text-white text-xs font-bold px-10 py-1 rotate-45 shadow-md">POPULAR</div>
                         
@@ -539,7 +773,7 @@
                             </div>
                             <p class="text-sm font-bold text-red-300 mt-3 bg-red-900/40 p-2 rounded border border-red-500/30">Sesuai untuk yang mahu website asas dan professional.</p>
                         </div>
-                        <div class="p-8 flex-1 bg-white">
+                        <div class="p-8 flex-1 bg-white flex flex-col justify-between">
                             <ul class="space-y-4 text-sm text-slate-600 mb-8">
                                 <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-red shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Website Profesional termasuk Legal Pages</span></li>
                                 <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-red shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Mobile friendly design.</span></li>
@@ -551,7 +785,7 @@
                                 <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-red shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>5 kali revision & Support Teknikal 30 hari.</span></li>
                                 <li class="flex items-start gap-3 font-bold text-brand-navy bg-red-50 p-2 rounded border border-red-100"><svg class="w-5 h-5 text-brand-red shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Siap dalam 24 jam.</span></li>
                             </ul>
-                            <a href="https://wa.me/60123456789?text=Hai%20Websaya,%20saya%20berminat%20Pakej%20Premium%20RM399" target="_blank" class="block w-full py-4 px-6 text-center rounded-xl bg-brand-red text-white font-bold hover:bg-brand-redhover transition shadow-glow transform hover:scale-105">Tempah Pakej Premium</a>
+                            <a href="https://wa.me/601119712135?text=Hai%20Websaya,%20saya%20berminat%20Pakej%20Premium%20RM399" target="_blank" class="block w-full py-4 px-6 text-center rounded-xl bg-brand-red text-white font-bold hover:bg-brand-redhover transition shadow-glow transform hover:scale-105">Tempah Pakej Premium</a>
                         </div>
                     </div>
 
@@ -568,7 +802,7 @@
                             </div>
                             <p class="text-sm font-medium text-slate-600 mt-3 p-2">Sesuai untuk Individu dan pemilik bisnes yang mahu fokus kepada SEO dan perniagaan jangka panjang.</p>
                         </div>
-                        <div class="p-8 flex-1 bg-white">
+                        <div class="p-8 flex-1 bg-white flex flex-col justify-between">
                             <ul class="space-y-4 text-sm text-slate-600 mb-8">
                                 <li class="flex items-start gap-3"><svg class="w-5 h-5 text-purple-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Website Profesional termasuk Legal Pages</span></li>
                                 <li class="flex items-start gap-3 font-bold text-brand-navy"><svg class="w-5 h-5 text-purple-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Tambahan 30 artikel SEO + Google Analytics, GSC & XML Sitemap.</span></li>
@@ -579,7 +813,7 @@
                                 <li class="flex items-start gap-3 font-bold text-brand-navy"><svg class="w-5 h-5 text-purple-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Unlimited revision (Teks, images, Themes) & Support 30 hari.</span></li>
                                 <li class="flex items-start gap-3"><svg class="w-5 h-5 text-purple-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Siap dalam 48-72 jam.</span></li>
                             </ul>
-                            <a href="https://wa.me/60123456789?text=Hai%20Websaya,%20saya%20berminat%20Pakej%20Full-Premium%20RM999" target="_blank" class="block w-full py-4 px-6 text-center rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition">Pilih Pakej Ini</a>
+                            <a href="https://wa.me/601119712135?text=Hai%20Websaya,%20saya%20berminat%20Pakej%20Full-Premium%20RM999" target="_blank" class="block w-full py-4 px-6 text-center rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition">Pilih Pakej Ini</a>
                         </div>
                     </div>
 
@@ -902,7 +1136,7 @@
                         </button>
                         <div class="faq-content px-6 py-5 border-t border-slate-100 text-slate-600 bg-slate-50 hidden">
                             <p class="mb-3">Tuan Puan boleh pilih pakej maintenance jika perlukan bantuan berterusan:</p>
-                            <ul class="space-y-2">
+                            <ul class="space-y-2 font-semibold">
                                 <li>🟢 Professional - RM50 setiap bulan</li>
                                 <li>🔵 Premium - RM80 setiap bulan</li>
                                 <li>🟣 Full-Premium -RM200 setiap bulan</li>
@@ -936,9 +1170,9 @@
                         </button>
                         <div class="faq-content px-6 py-5 border-t border-slate-100 text-slate-600 bg-slate-50 hidden">
                             <ul class="space-y-3">
-                                <li><span class="font-bold">🟢 Professional – RM299 -> 24 JAM</span></li>
-                                <li><span class="font-bold">🔵 Premium – RM399 -> 24 JAM</span></li>
-                                <li><span class="font-bold">🟣 Full-Premium – RM999 -> 48-72 JAM</span> <br><span class="text-sm">(boleh mengambil masa sehingga 10 hari bekerja atau lebih sekiranya berlaku kelewatan daripada pihak ketiga seperti proses kelulusan payment gateway integration yang wajib disahkan terlebih dahulu antara Bisnes Tuan Puan dengan pihak Bank)</span></li>
+                                <li><span class="font-bold text-green-600">🟢 Professional – RM299 -> 24 JAM</span></li>
+                                <li><span class="font-bold text-blue-600">🔵 Premium – RM399 -> 24 JAM</span></li>
+                                <li><span class="font-bold text-purple-600">🟣 Full-Premium – RM999 -> 48-72 JAM</span> <br><span class="text-sm">(boleh mengambil masa sehingga 10 hari bekerja atau lebih sekiranya berlaku kelewatan daripada pihak ketiga seperti proses kelulusan payment gateway integration yang wajib disahkan terlebih dahulu antara Bisnes Tuan Puan dengan pihak Bank)</span></li>
                             </ul>
                         </div>
                     </div>
@@ -1055,7 +1289,7 @@
                     </form>
                 </div>
                 
-                <!-- Social Media Links (Prepared as requested) -->
+                <!-- Social Media Links -->
                 <div class="pt-8 border-t border-white/10">
                     <p class="text-sm text-slate-400 mb-4">FOLLOW Kami Rapat2 di Media Sosial</p>
                     <div class="flex justify-center gap-4">
@@ -1065,33 +1299,235 @@
                         <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red hover:text-white transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
                         <!-- TikTok -->
                         <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red hover:text-white transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg></a>
-                        <!-- X (Twitter) -->
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red hover:text-white transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-                        <!-- Threads -->
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red hover:text-white transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.66 21c-4.14 0-7.3-3-7.3-7.27 0-4.17 3-7.46 7.42-7.46 3.78 0 6.64 2.53 6.64 6.45 0 3.23-1.8 5.4-4.26 5.4-1.3 0-2.32-.82-2.32-2.14 0-.46.12-1 .36-1.54l1.37-2.92c.3-.65.45-1.27.45-1.8 0-1.22-.84-1.92-2.07-1.92-1.93 0-3.4 1.83-3.4 4.54 0 2.23 1.34 3.73 3.32 3.73 1.6 0 2.9-.84 3.65-2.22l1.63 1c-1.16 2.02-3.13 3.14-5.3 3.14-3 0-5.3-2.18-5.3-5.63s2.32-5.74 5.3-5.74c1.68 0 3.24.64 4.28 1.77.94 1.02 1.44 2.45 1.44 4.02 0 4.67-3.47 7.78-8.15 7.78zM12 11.23c-.72 0-1.25.56-1.25 1.35 0 .68.45 1.25 1.13 1.25.64 0 1.2-.5 1.2-1.23 0-.74-.5-1.37-1.08-1.37zM12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm0 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/></svg></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FOOTER (EXACT REQUIREMENT) -->
-        <footer class="bg-[#0a0f1c] text-slate-500 py-6 text-center text-sm">
-            <div class="max-w-7xl mx-auto px-4">
-                Hak Cipta Terpelihara &copy; 2026 Websaya.xyz. Dibina di Malaysia by Asyraf Asri Empire 202303160700 (003505484-H)
+        <!-- FOOTER (EXACT REQUIREMENT WITH DUA LEGAL PAGES) -->
+        <footer class="bg-[#0a0f1c] text-slate-500 py-10 text-center text-sm border-t border-slate-900">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-4">
+                <!-- Dua Legal Pages links -->
+                <div class="flex items-center gap-6 text-xs text-slate-400 font-medium mb-2">
+                    <button onclick="openModal('privacyModal')" class="hover:text-brand-red hover:underline transition focus:outline-none">Privacy Policy</button>
+                    <span class="text-slate-800">|</span>
+                    <button onclick="openModal('disclaimerModal')" class="hover:text-brand-red hover:underline transition focus:outline-none">Disclaimer</button>
+                </div>
+                <div>
+                    Hak Cipta Terpelihara &copy; 2026 Websaya.xyz. Dibina di Malaysia by Asyraf Asri Empire 202303160700 (003505484-H)
+                </div>
             </div>
         </footer>
     </main>
 
+    <!-- ========================================== -->
+    <!-- LEGAL PAGES MODAL CONTAINERS (SINGLE-FILE) -->
+    <!-- ========================================== -->
+    
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm transition-all duration-300">
+        <div class="bg-white text-slate-800 w-full max-w-2xl rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden border border-slate-200">
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">
+                <h3 class="text-lg font-bold font-heading text-brand-navy">Privacy Policy</h3>
+                <button onclick="closeModal('privacyModal')" class="p-2 rounded-lg text-slate-500 hover:text-brand-red hover:bg-slate-200 transition focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <!-- Modal Content (TIRU BULAT BULAT) -->
+            <div class="p-6 overflow-y-auto space-y-5 text-sm leading-relaxed text-slate-600">
+                <p class="font-bold text-slate-800">Selamat datang ke Websaya.xyz.</p>
+                <p>Di Websaya.xyz, privasi anda adalah penting bagi kami. Laman web ini menyediakan maklumat dan perkhidmatan berkaitan pembinaan laman web, termasuk pendaftaran domain, web hosting, dan sokongan teknikal untuk membantu individu serta perniagaan di Malaysia membina kehadiran digital yang profesional.</p>
+                
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Maklumat yang Kami Kumpulkan</h4>
+                    <p>Kami mungkin mengumpulkan maklumat berikut:</p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Maklumat peribadi seperti nama, alamat e-mel, dan nombor telefon apabila anda menghubungi kami.</li>
+                        <li>Maklumat teknikal seperti alamat IP, jenis pelayar, jenis peranti, halaman yang dilawati, dan masa lawatan.</li>
+                        <li>Data penggunaan melalui cookies dan teknologi yang serupa.</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Bagaimana Maklumat Digunakan</h4>
+                    <p>Maklumat yang dikumpulkan digunakan untuk:</p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Memberi respons kepada pertanyaan anda.</li>
+                        <li>Menyediakan perkhidmatan dan sokongan pelanggan.</li>
+                        <li>Menambah baik prestasi laman web dan pengalaman pengguna.</li>
+                        <li>Menganalisis trafik laman web.</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Cookies</h4>
+                    <p>Laman web ini menggunakan cookies untuk memahami cara pelawat menggunakan laman web kami dan untuk meningkatkan pengalaman pengguna.</p>
+                    <p>Anda boleh memilih untuk mematikan cookies melalui tetapan pelayar anda.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Perkhidmatan Pihak Ketiga</h4>
+                    <p>Kami menggunakan Google Analytics untuk menganalisis trafik dan tingkah laku pengguna di laman web ini. Google Analytics mungkin mengumpulkan data tertentu mengikut dasar privasi mereka sendiri.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Keselamatan Data</h4>
+                    <p>Kami mengambil langkah yang munasabah untuk melindungi maklumat anda. Walau bagaimanapun, tiada kaedah penghantaran data melalui internet yang boleh dijamin 100% selamat.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Pautan ke Laman Web Luar</h4>
+                    <p>Laman web ini mungkin mengandungi pautan ke laman web pihak ketiga. Kami tidak bertanggungjawab terhadap kandungan atau amalan privasi laman web tersebut.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Persetujuan Anda</h4>
+                    <p>Dengan menggunakan Websaya.xyz, anda bersetuju dengan pengumpulan dan penggunaan maklumat seperti yang diterangkan dalam Dasar Privasi ini.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Hubungi Kami</h4>
+                    <p>Jika anda mempunyai sebarang pertanyaan berkaitan privasi, sila hubungi kami melalui halaman Contact Us di Websaya.xyz.</p>
+                </div>
+            </div>
+            <!-- Modal Footer -->
+            <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex justify-end">
+                <button onclick="closeModal('privacyModal')" class="bg-slate-900 text-white px-5 py-2 rounded-xl text-sm font-bold hover:bg-brand-red transition">Faham & Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer Modal -->
+    <div id="disclaimerModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm transition-all duration-300">
+        <div class="bg-white text-slate-800 w-full max-w-2xl rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden border border-slate-200">
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">
+                <h3 class="text-lg font-bold font-heading text-brand-navy">Disclaimer</h3>
+                <button onclick="closeModal('disclaimerModal')" class="p-2 rounded-lg text-slate-500 hover:text-brand-red hover:bg-slate-200 transition focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <!-- Modal Content (TIRU BULAT BULAT) -->
+            <div class="p-6 overflow-y-auto space-y-5 text-sm leading-relaxed text-slate-600">
+                <p class="font-bold text-slate-800 text-base">Disclaimer</p>
+                <p>Maklumat yang disediakan di Websaya.xyz adalah untuk tujuan maklumat umum sahaja berkaitan perkhidmatan pembinaan laman web, pendaftaran domain, web hosting, dan sokongan teknikal.</p>
+                <p>Walaupun kami berusaha untuk memastikan maklumat yang disediakan adalah tepat dan terkini, kami tidak membuat sebarang jaminan, sama ada secara nyata atau tersirat, mengenai ketepatan, kelengkapan, kebolehpercayaan, atau kesesuaian maklumat tersebut.</p>
+                
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Bukan Nasihat Profesional</h4>
+                    <p>Sebarang maklumat di laman web ini tidak boleh dianggap sebagai nasihat profesional, undang-undang, kewangan, atau teknikal yang khusus untuk situasi anda.</p>
+                    <p>Anda digalakkan untuk mendapatkan nasihat lanjut daripada penyedia perkhidmatan atau pakar yang berkaitan sebelum membuat sebarang keputusan.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Perkhidmatan Pihak Ketiga</h4>
+                    <p>Kami mungkin merujuk kepada perkhidmatan pihak ketiga seperti:</p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Google Analytics</li>
+                        <li>Penyedia domain dan hosting lain</li>
+                    </ul>
+                    <p>Kami tidak mempunyai kawalan ke atas perkhidmatan atau dasar pihak ketiga tersebut dan tidak bertanggungjawab terhadap sebarang kerugian atau masalah yang timbul daripada penggunaan mereka.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Had Tanggungjawab</h4>
+                    <p>Websaya.xyz tidak bertanggungjawab terhadap sebarang kerugian, kerosakan, atau gangguan yang timbul hasil daripada penggunaan laman web ini atau pergantungan terhadap maklumat yang disediakan.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Persetujuan Pengguna</h4>
+                    <p>Dengan menggunakan laman web ini, anda bersetuju bahawa penggunaan maklumat adalah atas risiko anda sendiri.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base">Kemaskini Penafian</h4>
+                    <p>Kami berhak untuk mengubah kandungan Penafian ini pada bila-bila masa tanpa notis terlebih dahulu. Perubahan akan berkuat kuasa sebaik sahaja diterbitkan di laman web ini.</p>
+                </div>
+            </div>
+            <!-- Modal Footer -->
+            <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex justify-end">
+                <button onclick="closeModal('disclaimerModal')" class="bg-slate-900 text-white px-5 py-2 rounded-xl text-sm font-bold hover:bg-brand-red transition">Faham & Tutup</button>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Modal Control Functions (Single-File Safe)
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.classList.add('overflow-hidden'); // Disable background scrolling
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden'); // Re-enable background scrolling
+            }
+        }
+
+        // Close modal on outside click
+        window.addEventListener('click', (e) => {
+            const privacyModal = document.getElementById('privacyModal');
+            const disclaimerModal = document.getElementById('disclaimerModal');
+            if (e.target === privacyModal) closeModal('privacyModal');
+            if (e.target === disclaimerModal) closeModal('disclaimerModal');
+        });
+
+        // Close modal on Escape key press
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal('privacyModal');
+                closeModal('disclaimerModal');
+            }
+        });
+
         document.addEventListener('DOMContentLoaded', () => {
             // Navbar Scroll Effect
             const navbar = document.getElementById('navbar');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 20) {
-                    navbar.classList.add('shadow-md');
+                    navbar.classList.add('shadow-md', 'bg-white');
+                    navbar.classList.remove('bg-white/95');
                 } else {
-                    navbar.classList.remove('shadow-md');
+                    navbar.classList.remove('shadow-md', 'bg-white');
+                    navbar.classList.add('bg-white/95');
                 }
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburgerIcon = document.getElementById('hamburgerIcon');
+            const closeIcon = document.getElementById('closeIcon');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                if (isOpen) {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                } else {
+                    mobileMenu.classList.remove('hidden');
+                    hamburgerIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                }
+            });
+
+            // Close mobile menu when links are clicked
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
             });
 
             // Live Counter Logic
